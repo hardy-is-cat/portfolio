@@ -5,6 +5,7 @@ const lightColors = {
   gnb: "#fff",
   text: "#2D373B",
   primary: "#F5467A",
+  border: "#c4c4c4",
 };
 
 const darkColors = {
@@ -12,6 +13,7 @@ const darkColors = {
   gnb: "#2D373B",
   text: "#fff",
   primary: "#ACEA6E",
+  border: "#c4c4c4",
 };
 
 const fontSize = {

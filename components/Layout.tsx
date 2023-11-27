@@ -4,7 +4,7 @@ import { darkModeState } from "stores/atom";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "styles/theme";
 
-import Header from "./Header";
+import Header from "./Header/Header";
 import Footer from "./Footer";
 
 export default function Layout({ children }: React.PropsWithChildren) {
