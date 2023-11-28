@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import ViewModeBtn from "./ViewModeBtn";
-import GnbBtn from "./GnbBtn";
-import GnbMenu from "./GnbMenu";
+import ViewModeBtn from "../containers/Header/ViewModeBtn";
+import GnbBtn from "../containers/Header/GnbBtn";
+import GnbMenu from "../containers/Header/GnbMenu";
 
 function Header() {
   return (

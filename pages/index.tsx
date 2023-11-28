@@ -1,4 +1,4 @@
-import MainVisual from "@/components/Intro/MainVisual";
+import MainVisual from "containers/Intro/MainVisual";
 
 export default function Home() {
   return (
