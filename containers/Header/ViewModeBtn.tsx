@@ -26,7 +26,7 @@ function ViewModeBtn() {
   return (
     <FieldsetBlock>
       <legend className="a11y-hidden">모드 선택</legend>
-      <RadioBlock isDarkMode={isDarkMode}>
+      <RadioBlock $isDarkMode={isDarkMode}>
         <input
           type="radio"
           id="개발자"
@@ -35,7 +35,7 @@ function ViewModeBtn() {
         />
         <label htmlFor="개발자">개발자</label>
       </RadioBlock>
-      <RadioBlock isDarkMode={isDarkMode}>
+      <RadioBlock $isDarkMode={isDarkMode}>
         <input
           type="radio"
           id="일반인"
@@ -55,7 +55,7 @@ const FieldsetBlock = styled.fieldset`
   z-index: 101;
 `;
 
-const RadioBlock = styled.div<{ isDarkMode: boolean }>`
+const RadioBlock = styled.div<{ $isDarkMode: boolean }>`
   input {
     display: none;
   }
@@ -70,18 +70,18 @@ const RadioBlock = styled.div<{ isDarkMode: boolean }>`
 
   label[for="개발자"] {
     border-radius: 8px 0 0 8px;
-    background-color: ${({ isDarkMode, theme }) =>
-      isDarkMode ? theme.colors.primary : "transparent"};
-    color: ${({ isDarkMode, theme }) =>
-      isDarkMode ? theme.colors.bg : theme.colors.text};
+    background-color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.primary : "transparent"};
+    color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.bg : theme.colors.text};
   }
 
   label[for="일반인"] {
     border-radius: 0 8px 8px 0;
-    background-color: ${({ isDarkMode, theme }) =>
-      isDarkMode ? "transparent" : theme.colors.primary};
-    color: ${({ isDarkMode, theme }) =>
-      isDarkMode ? theme.colors.text : theme.colors.bg};
+    background-color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? "transparent" : theme.colors.primary};
+    color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.text : theme.colors.bg};
     border-left: none;
   }
 `;

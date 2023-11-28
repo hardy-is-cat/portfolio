@@ -11,12 +11,13 @@ const lightColors = {
 const darkColors = {
   bg: "#253034",
   gnb: "#2D373B",
-  text: "#fff",
+  text: "#f6f6f6",
   primary: "#ACEA6E",
   border: "#c4c4c4",
 };
 
 const fontSize = {
+  xlText: "3rem",
   headline1: "2.25rem",
   headline2: "1.5rem",
   headline3: "1.25rem",

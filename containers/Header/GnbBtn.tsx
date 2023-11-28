@@ -7,7 +7,7 @@ function GnbBtn() {
 
   return (
     <HamburgerButton
-      isGnbOpened={isGnbOpened}
+      $isGnbOpened={isGnbOpened}
       onClick={() => setIsGnbOpened(!isGnbOpened)}
     >
       <span className="a11y-hidden">메뉴</span>
@@ -20,7 +20,7 @@ function GnbBtn() {
 
 export default GnbBtn;
 
-const HamburgerButton = styled.button<{ isGnbOpened: boolean }>`
+const HamburgerButton = styled.button<{ $isGnbOpened: boolean }>`
   display: block;
   width: 48px;
   height: 48px;
@@ -42,19 +42,19 @@ const HamburgerButton = styled.button<{ isGnbOpened: boolean }>`
   }
 
   .hamburger-line.top {
-    width: ${({ isGnbOpened }) => (isGnbOpened ? "125%" : "")};
+    width: ${({ $isGnbOpened }) => ($isGnbOpened ? "125%" : "")};
     transform-origin: bottom left;
-    transform: ${({ isGnbOpened }) => (isGnbOpened ? "rotate(45deg)" : "")};
+    transform: ${({ $isGnbOpened }) => ($isGnbOpened ? "rotate(45deg)" : "")};
   }
 
   .hamburger-line.middle {
-    width: ${({ isGnbOpened }) => (isGnbOpened ? "0" : "100%")};
+    width: ${({ $isGnbOpened }) => ($isGnbOpened ? "0" : "100%")};
   }
 
   .hamburger-line.bottom {
-    width: ${({ isGnbOpened }) => (isGnbOpened ? "125%" : "")};
+    width: ${({ $isGnbOpened }) => ($isGnbOpened ? "125%" : "")};
     transform-origin: top left;
     margin-bottom: 0;
-    transform: ${({ isGnbOpened }) => (isGnbOpened ? "rotate(-45deg)" : "")};
+    transform: ${({ $isGnbOpened }) => ($isGnbOpened ? "rotate(-45deg)" : "")};
   }
 `;

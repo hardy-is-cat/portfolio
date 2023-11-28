@@ -1,10 +1,11 @@
 import MainVisual from "containers/Intro/MainVisual";
+import Introduce from "containers/Introduce/Introduce";
 
 export default function Home() {
   return (
     <>
       <MainVisual />
-      <h1>해위</h1>
+      <Introduce />
       <p>배위</p>
     </>
   );

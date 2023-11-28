@@ -7,10 +7,10 @@ function GnbMenu() {
   return (
     <>
       <GnbBGBlock
-        isGnbOpened={isGnbOpened}
+        $isGnbOpened={isGnbOpened}
         onClick={() => setIsGnbOpened(!isGnbOpened)}
       ></GnbBGBlock>
-      <GnbMenuWrapper isGnbOpened={isGnbOpened}>
+      <GnbMenuWrapper $isGnbOpened={isGnbOpened}>
         <ul>
           <li>인트로</li>
           <li>어떤 개발자인가요?</li>
@@ -25,9 +25,9 @@ function GnbMenu() {
 
 export default GnbMenu;
 
-const GnbBGBlock = styled.div<{ isGnbOpened: boolean }>`
-  visibility: ${({ isGnbOpened }) => (isGnbOpened ? "visible" : "hidden")};
-  opacity: ${({ isGnbOpened }) => (isGnbOpened ? "1" : "0")};
+const GnbBGBlock = styled.div<{ $isGnbOpened: boolean }>`
+  visibility: ${({ $isGnbOpened }) => ($isGnbOpened ? "visible" : "hidden")};
+  opacity: ${({ $isGnbOpened }) => ($isGnbOpened ? "1" : "0")};
   position: fixed;
   top: 0;
   left: 0;
@@ -38,22 +38,22 @@ const GnbBGBlock = styled.div<{ isGnbOpened: boolean }>`
   z-index: 101;
 `;
 
-const GnbMenuWrapper = styled.nav<{ isGnbOpened: boolean }>`
+const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
   position: fixed;
   top: 0;
-  right: ${({ isGnbOpened }) => (isGnbOpened ? "0" : "-400px")};
+  right: ${({ $isGnbOpened }) => ($isGnbOpened ? "0" : "-400px")};
   width: 400px;
   height: 100vh;
   padding: 100px 50px;
   background-color: ${({ theme }) => theme.colors.bg};
-  box-shadow: ${({ isGnbOpened }) =>
-    isGnbOpened ? "-5px -5px 15px rgba(0, 0, 0, 0.2)" : "none"};
+  box-shadow: ${({ $isGnbOpened }) =>
+    $isGnbOpened ? "-5px -5px 15px rgba(0, 0, 0, 0.2)" : "none"};
   transition: right 0.4s;
   z-index: 101;
 
   ${({ theme }) => theme.media.tablet} {
     width: 80%;
-    right: ${({ isGnbOpened }) => (isGnbOpened ? "0" : "-80%")};
+    right: ${({ $isGnbOpened }) => ($isGnbOpened ? "0" : "-80%")};
   }
 
   li {

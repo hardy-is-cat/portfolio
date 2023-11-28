@@ -9,3 +9,8 @@ export const gnbState = atom({
   key: "gnbState",
   default: false,
 });
+
+export const introduceTitleState = atom({
+  key: "introduceTitleState",
+  default: false,
+});
