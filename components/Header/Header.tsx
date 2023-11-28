@@ -26,6 +26,7 @@ const HeaderBlock = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: ${({ theme }) => theme.colors.gnb};
   z-index: 100;
 `;
 
