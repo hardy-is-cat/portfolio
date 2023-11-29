@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import IconScroll from "./IconScroll";
+import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
   return (
     <MainVisualWrapper id="main-visual">
-      <p>
+      <p {...useScrollFadeIn<HTMLParagraphElement>()}>
         엉덩이가 무거운 개발자
         <br />
         조정현입니다.

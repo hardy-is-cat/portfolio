@@ -7,6 +7,7 @@ import styled from "styled-components";
 import Title from "@/components/Title";
 import LinkBtn from "@/components/LinkBtn";
 import IntroduceText from "./IntroduceText";
+import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function Introduce() {
   const introduceRef = useRef<HTMLDivElement | null>(null);
@@ -39,7 +40,9 @@ function Introduce() {
 
   return (
     <section id="introduce">
-      <Title>어떤 개발자인가요?</Title>
+      <Title {...useScrollFadeIn<HTMLHeadingElement>()}>
+        어떤 개발자인가요?
+      </Title>
       <IntroduceBlock ref={introduceRef}>
         <PictureBlock>
           <Image

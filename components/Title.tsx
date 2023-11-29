@@ -1,8 +1,17 @@
+import { RefObject, forwardRef } from "react";
 import styled from "styled-components";
 
-function Title({ children }: React.PropsWithChildren) {
-  return <TitleBlock>{children}</TitleBlock>;
-}
+type TitleProps = {
+  children: React.ReactNode;
+};
+
+const Title = forwardRef<HTMLHeadingElement, TitleProps>((props, ref) => {
+  return (
+    <TitleBlock {...props} ref={ref}>
+      {props.children}
+    </TitleBlock>
+  );
+});
 
 export default Title;
 
