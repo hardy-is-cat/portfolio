@@ -3,28 +3,36 @@ import IconScroll from "./IconScroll";
 
 function MainVisual() {
   return (
-    <MainVisualWrapper>
+    <MainVisualWrapper id="main-visual">
       <p>
         엉덩이가 무거운 개발자
         <br />
         조정현입니다.
       </p>
-      <IconScroll />
+      <IconScrollBlock />
     </MainVisualWrapper>
   );
 }
 
 export default MainVisual;
 
-const MainVisualWrapper = styled.div`
+const MainVisualWrapper = styled.section`
+  position: relative;
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 100px);
+  padding: 300px 0;
   background-color: ${({ theme }) => theme.colors.bg};
   text-align: center;
 
   p {
-    margin: 200px 0;
     font-size: 48px;
     font-weight: 700;
   }
+`;
+
+const IconScrollBlock = styled(IconScroll)`
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50%);
 `;

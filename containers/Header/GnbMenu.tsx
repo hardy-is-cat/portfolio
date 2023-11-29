@@ -1,6 +1,7 @@
 import { useRecoilState } from "recoil";
 import { gnbState } from "stores/atom";
 import styled from "styled-components";
+import scrollToHash from "utils/scrollToHash";
 
 function GnbMenu() {
   const [isGnbOpened, setIsGnbOpened] = useRecoilState(gnbState);
@@ -12,11 +13,25 @@ function GnbMenu() {
       ></GnbBGBlock>
       <GnbMenuWrapper $isGnbOpened={isGnbOpened}>
         <ul>
-          <li>인트로</li>
-          <li>어떤 개발자인가요?</li>
-          <li>보유 기술</li>
-          <li>프로젝트</li>
-          <li>연락처</li>
+          <li>
+            <button type="button" onClick={() => scrollToHash("main-visual")}>
+              인트로
+            </button>
+          </li>
+          <li>
+            <button type="button" onClick={() => scrollToHash("introduce")}>
+              어떤 개발자인가요?
+            </button>
+          </li>
+          <li>
+            <button type="button">보유 기술</button>
+          </li>
+          <li>
+            <button type="button">프로젝트</button>
+          </li>
+          <li>
+            <button type="button">연락처</button>
+          </li>
         </ul>
       </GnbMenuWrapper>
     </>
@@ -56,9 +71,13 @@ const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
     right: ${({ $isGnbOpened }) => ($isGnbOpened ? "0" : "-80%")};
   }
 
-  li {
+  button {
+    border: none;
+    background-color: transparent;
     font-size: ${({ theme }) => theme.fontSize.headline2};
     margin-bottom: 24px;
     font-weight: 300;
+    color: inherit;
+    cursor: pointer;
   }
 `;

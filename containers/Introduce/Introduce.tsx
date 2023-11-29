@@ -36,8 +36,9 @@ function Introduce() {
       observer.observe(introduceRef.current);
     }
   }, []);
+
   return (
-    <>
+    <section id="introduce">
       <Title>어떤 개발자인가요?</Title>
       <IntroduceBlock ref={introduceRef}>
         <PictureBlock>
@@ -54,7 +55,7 @@ function Introduce() {
         </PictureBlock>
         <IntroduceText />
       </IntroduceBlock>
-    </>
+    </section>
   );
 }
 

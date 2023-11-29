@@ -10,5 +10,5 @@ const TitleBlock = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.xlText};
   color: ${({ theme }) => theme.colors.text};
   text-align: center;
-  margin-bottom: 100px;
+  margin: 100px 0;
 `;

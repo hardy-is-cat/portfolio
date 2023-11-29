@@ -1,4 +1,4 @@
-import MainVisual from "containers/Intro/MainVisual";
+import MainVisual from "containers/MainVisual/MainVisual";
 import Introduce from "containers/Introduce/Introduce";
 
 export default function Home() {
@@ -6,7 +6,6 @@ export default function Home() {
     <>
       <MainVisual />
       <Introduce />
-      <p>배위</p>
     </>
   );
 }

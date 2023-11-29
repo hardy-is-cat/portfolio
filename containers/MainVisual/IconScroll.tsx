@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-function IconScroll() {
+type IconScrollTypes = {
+  className?: string;
+};
+
+function IconScroll({ className }: IconScrollTypes) {
   return (
-    <IconWrapper>
+    <IconWrapper className={className}>
       <span className="line"></span>
       <span className="line"></span>
     </IconWrapper>
