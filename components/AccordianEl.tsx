@@ -10,15 +10,15 @@ type AccodianElTypes = {
 function AccodianEl({ title, content }: AccodianElTypes) {
   const [isActive, setIsActive] = useState(false);
 
+  const toggleDD = () => setIsActive(!isActive);
+
   return (
     <>
-      <DTBlock isActive={isActive} onClick={() => setIsActive(!isActive)}>
+      <DTBlock isActive={isActive} onClick={toggleDD}>
         {title}
         <IconArrow size={12} direction={isActive ? "up" : "down"} />
       </DTBlock>
-      <DDWrapper isActive={isActive}>
-        <DDBlock isActive={isActive}>{content}</DDBlock>
-      </DDWrapper>
+      <DDBlock isActive={isActive}>{content}</DDBlock>
     </>
   );
 }
@@ -30,28 +30,32 @@ const DTBlock = styled.dt<{ isActive: boolean }>`
   justify-content: space-between;
   align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.text};
-  border-bottom: ${({ isActive }) => isActive && "none"};
   padding: 16px 20px;
   font-size: ${({ theme }) => theme.fontSize.headline3};
   font-weight: 700;
   cursor: pointer;
-`;
-
-const DDWrapper = styled.div<{ isActive: boolean }>`
-  height: ${({ isActive }) => (isActive ? "100%" : "0")};
-  margin-bottom: 8px;
-  overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.3s ease-out;
 `;
 
 const DDBlock = styled.dd<{ isActive: boolean }>`
-  visibility: ${({ isActive }) => (isActive ? "visible" : "hidden")};
-  padding: ${({ isActive }) => (isActive ? "20px" : "0")};
+  padding-left: 20px;
+  padding-right: 20px;
   border: 1px solid ${({ theme }) => theme.colors.text};
   border-top: none;
-  transition:
-    padding-top 0.3s,
-    padding-bottom 0.3s,
-    border 0.3s;
+  margin-bottom: 8px;
+  transform-origin: center top;
+  transform: scaleY(0);
+  padding-bottom: 0;
+  padding-top: 0;
+  height: 0;
+  ${({ isActive }) =>
+    isActive &&
+    `
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  transform: scaleY(100%);
+`}
+  transition: all 0.3s;
   line-height: 1.5;
 `;
