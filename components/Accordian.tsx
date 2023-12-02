@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 import AccodianEl from "./AccordianEl";
+import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
+import AccordianEl from "./AccordianEl";
 
 const skills = [
   {
@@ -27,10 +29,10 @@ const skills = [
 
 function Accodian() {
   return (
-    <DlBlock>
+    <DlBlock {...useScrollFadeIn<HTMLDListElement>()}>
       {skills.map((skill, i) => {
         return (
-          <AccodianEl key={i} title={skill.title} content={skill.content} />
+          <AccordianEl key={i} title={skill.title} content={skill.content} />
         );
       })}
     </DlBlock>

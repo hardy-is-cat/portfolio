@@ -20,7 +20,9 @@ function GnbBtn() {
 
 export default GnbBtn;
 
-const HamburgerButton = styled.button<{ $isGnbOpened: boolean }>`
+const HamburgerButton = styled.button<{
+  $isGnbOpened: boolean;
+}>`
   display: block;
   width: 48px;
   height: 48px;
@@ -30,6 +32,8 @@ const HamburgerButton = styled.button<{ $isGnbOpened: boolean }>`
   background-color: transparent;
   z-index: 102;
   cursor: pointer;
+  transform-origin: top right;
+  transition: all 0.3s;
 
   .hamburger-line {
     display: block;

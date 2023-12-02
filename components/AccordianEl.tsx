@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import IconArrow from "./IconArrow";
 
 type AccodianElTypes = {
@@ -7,25 +7,25 @@ type AccodianElTypes = {
   content: string;
 };
 
-function AccodianEl({ title, content }: AccodianElTypes) {
+function AccordianEl({ title, content }: AccodianElTypes) {
   const [isActive, setIsActive] = useState(false);
 
   const toggleDD = () => setIsActive(!isActive);
 
   return (
     <>
-      <DTBlock isActive={isActive} onClick={toggleDD}>
+      <DTBlock onClick={toggleDD}>
         {title}
         <IconArrow size={12} direction={isActive ? "up" : "down"} />
       </DTBlock>
-      <DDBlock isActive={isActive}>{content}</DDBlock>
+      <DDBlock $isActive={isActive}>{content}</DDBlock>
     </>
   );
 }
 
-export default AccodianEl;
+export default AccordianEl;
 
-const DTBlock = styled.dt<{ isActive: boolean }>`
+const DTBlock = styled.dt`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,10 +34,9 @@ const DTBlock = styled.dt<{ isActive: boolean }>`
   font-size: ${({ theme }) => theme.fontSize.headline3};
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease-out;
 `;
 
-const DDBlock = styled.dd<{ isActive: boolean }>`
+const DDBlock = styled.dd<{ $isActive: boolean }>`
   padding-left: 20px;
   padding-right: 20px;
   border: 1px solid ${({ theme }) => theme.colors.text};
@@ -48,14 +47,15 @@ const DDBlock = styled.dd<{ isActive: boolean }>`
   padding-bottom: 0;
   padding-top: 0;
   height: 0;
-  ${({ isActive }) =>
-    isActive &&
-    `
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 100%;
-  transform: scaleY(100%);
-`}
   transition: all 0.3s;
   line-height: 1.5;
+
+  ${({ $isActive }) =>
+    $isActive &&
+    css`
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: 100%;
+      transform: scaleY(100%);
+    `}
 `;
