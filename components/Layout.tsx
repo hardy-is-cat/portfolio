@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { darkModeState } from "stores/atom";
 import styled, { ThemeProvider } from "styled-components";
@@ -10,7 +10,7 @@ import Footer from "./Footer";
 export default function Layout({ children }: React.PropsWithChildren) {
   const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeState);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (localStorage.getItem("darkMode") !== undefined) {
       setIsDarkMode(!!Number(localStorage.getItem("darkMode")));
     }
