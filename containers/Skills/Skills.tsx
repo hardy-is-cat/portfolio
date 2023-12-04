@@ -1,5 +1,5 @@
 import Accodian from "@/components/Accordian";
-import Title from "@/components/Title";
+import Title from "@/components/SectionTitle";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function Skills() {

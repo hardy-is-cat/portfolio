@@ -1,4 +1,4 @@
-import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 import IconEmail from "public/images/icon-email.svg";
 import IconCall from "public/images/icon-call.svg";
@@ -9,7 +9,9 @@ import Link from "next/link";
 function Contact() {
   return (
     <SectionBlock>
-      <Title {...useScrollFadeIn<HTMLHeadingElement>()}>연락처</Title>
+      <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
+        연락처
+      </SectionTitle>
       <ContactWrapper {...useScrollFadeIn<HTMLDivElement>()}>
         <p>
           <IconCall />
@@ -34,10 +36,11 @@ function Contact() {
 
 export default Contact;
 
-const SectionBlock = styled.div`
+const SectionBlock = styled.section`
   ${({ theme }) => theme.width[1280]}
   flex-flow: column;
   align-items: center;
+  padding-bottom: 100px;
 `;
 
 const ContactWrapper = styled.div`

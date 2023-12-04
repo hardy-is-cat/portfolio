@@ -1,11 +1,13 @@
-import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 import ProjectCards from "./ProjectCards";
 
 function Projects() {
   return (
     <section>
-      <Title {...useScrollFadeIn<HTMLHeadingElement>()}>프로젝트</Title>
+      <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
+        프로젝트
+      </SectionTitle>
       <ProjectCards />
     </section>
   );

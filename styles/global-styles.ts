@@ -9,14 +9,17 @@ const GlobalStyle = createGlobalStyle`
     src: url("/fonts/PretendardVariable.ttf") format("ttf");
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
   html, body, input, button, textarea {
     font-family: "Montserrat", "pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
 
   * {
     box-sizing: border-box;
+  }
+
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   
   input, button {

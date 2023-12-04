@@ -4,7 +4,7 @@ import { useSetRecoilState } from "recoil";
 import { introduceTitleState } from "stores/atom";
 import styled from "styled-components";
 
-import Title from "@/components/Title";
+import SectionTitle from "@/components/SectionTitle";
 import LinkBtn from "@/components/LinkBtn";
 import IntroduceText from "./IntroduceText";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
@@ -40,9 +40,9 @@ function Introduce() {
 
   return (
     <section id="introduce">
-      <Title {...useScrollFadeIn<HTMLHeadingElement>()}>
+      <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
         어떤 개발자인가요?
-      </Title>
+      </SectionTitle>
       <IntroduceBlock ref={introduceRef}>
         <PictureBlock>
           <Image

@@ -21,7 +21,7 @@ const MainVisualWrapper = styled.section`
   position: relative;
   width: 100%;
   height: calc(100vh - 100px);
-  padding: 300px 0;
+  padding: 400px 0 300px;
   background-color: ${({ theme }) => theme.colors.bg};
   text-align: center;
 

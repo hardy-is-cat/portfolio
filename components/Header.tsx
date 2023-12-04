@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { darkModeState } from "stores/atom";
 import styled, { css } from "styled-components";
 import ViewModeBtn from "../containers/Header/ViewModeBtn";
 import GnbBtn from "../containers/Header/GnbBtn";
@@ -7,6 +9,7 @@ import GnbMenu from "../containers/Header/GnbMenu";
 function Header() {
   const headerRef = useRef<HTMLElement | null>(null);
   const [isScroll, setIsScroll] = useState<boolean>(false);
+  const isDarkMode = useRecoilValue(darkModeState);
 
   const headerScrollEvent = () => {
     if (headerRef.current && window.scrollY > 100) {
@@ -22,7 +25,7 @@ function Header() {
   }, []);
 
   return (
-    <HeaderBlock ref={headerRef} $isScroll={isScroll}>
+    <HeaderBlock ref={headerRef} $isScroll={isScroll} $isDarkMode={isDarkMode}>
       <H1Block aria-label="조정현의 포트폴리오 사이트">
         ZU
         <br />
@@ -37,7 +40,7 @@ function Header() {
 
 export default Header;
 
-const HeaderBlock = styled.header<{ $isScroll: boolean }>`
+const HeaderBlock = styled.header<{ $isScroll: boolean; $isDarkMode: boolean }>`
   position: fixed;
   display: flex;
   flex-flow: row;
@@ -71,6 +74,11 @@ const HeaderBlock = styled.header<{ $isScroll: boolean }>`
         padding: 0 8px;
       }
     `}
+
+  ${({ $isDarkMode, theme }) =>
+    css`
+      border-bottom: 1px solid #ebebeb;
+    ` || $isDarkMode}
 `;
 
 const H1Block = styled.h1`
