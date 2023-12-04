@@ -3,12 +3,14 @@ import styled from "styled-components";
 type IconArrowTypes = {
   size: number;
   direction?: string;
+  color?: string;
   className?: string;
 };
 
 function IconArrow({
   size = 20,
   direction = "top",
+  color,
   className,
 }: IconArrowTypes) {
   const directionToDeg = (direction: string) => {
@@ -31,6 +33,7 @@ function IconArrow({
       className={className}
       size={size}
       direction={directionToDeg(direction)}
+      color={color}
     >
       <span className="line"></span>
     </IconWrapper>
@@ -47,8 +50,8 @@ const IconWrapper = styled.div<IconArrowTypes>`
     display: block;
     width: ${({ size }) => size + "px"};
     height: ${({ size }) => size + "px"};
-    border-top: 2px solid ${({ theme }) => theme.colors.text};
-    border-right: 2px solid ${({ theme }) => theme.colors.text};
+    border-top: 2px solid ${({ theme, color }) => color || theme.colors.text};
+    border-right: 2px solid ${({ theme, color }) => color || theme.colors.text};
     transform: translateY(0%) ${({ direction }) => `rotate(${direction})`};
     transition: all 0.2s;
   }

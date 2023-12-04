@@ -65,12 +65,7 @@ function Introduce() {
 export default Introduce;
 
 const IntroduceBlock = styled.div`
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  max-width: 1280px;
-  padding: 20px;
-  margin: 0 auto;
+  ${({ theme }) => theme.width[1280]}
   gap: 140px;
 `;
 

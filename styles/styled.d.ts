@@ -4,6 +4,7 @@ import {
   LightColorTypes,
   FontSizeTypes,
   MediaQueryTypes,
+  WidthTypes,
 } from "./theme";
 
 declare module "styled-components" {
@@ -11,5 +12,6 @@ declare module "styled-components" {
     colors: LightColorTypes | DarkColorTypes;
     fontSize: FontSizeTypes;
     media: MediaQueryTypes;
+    width: WidthTypes;
   }
 }

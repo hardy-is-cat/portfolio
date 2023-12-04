@@ -38,19 +38,36 @@ const media = {
   mobile: customMediaQuery(360),
 };
 
+const customWidth = (maxWidth: number): string => {
+  return `display: flex;
+  flex-flow: row;
+  justify-content: center;
+  max-width: ${maxWidth}px;
+  padding: 20px;
+  margin: 0 auto;`;
+};
+
+const width = {
+  custom: customWidth,
+  1280: customWidth(1280),
+};
+
 export type LightColorTypes = typeof lightColors;
 export type DarkColorTypes = typeof darkColors;
 export type FontSizeTypes = typeof fontSize;
 export type MediaQueryTypes = typeof media;
+export type WidthTypes = typeof width;
 
 export const darkTheme: DefaultTheme = {
   colors: darkColors,
   media,
   fontSize,
+  width,
 };
 
 export const lightTheme: DefaultTheme = {
   colors: lightColors,
   media,
   fontSize,
+  width,
 };
