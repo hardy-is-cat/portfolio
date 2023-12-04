@@ -75,10 +75,12 @@ const HeaderBlock = styled.header<{ $isScroll: boolean; $isDarkMode: boolean }>`
       }
     `}
 
-  ${({ $isDarkMode, theme }) =>
-    css`
-      border-bottom: 1px solid #ebebeb;
-    ` || $isDarkMode}
+  ${({ $isDarkMode }) =>
+    $isDarkMode
+      ? ""
+      : css`
+          border-bottom: 1px solid #ebebeb;
+        `}
 `;
 
 const H1Block = styled.h1`

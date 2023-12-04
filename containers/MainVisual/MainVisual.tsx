@@ -19,9 +19,11 @@ export default MainVisual;
 
 const MainVisualWrapper = styled.section`
   position: relative;
+  top: 100px;
   width: 100%;
   height: calc(100vh - 100px);
-  padding: 400px 0 300px;
+  padding: 300px 0;
+  margin-bottom: 100px;
   background-color: ${({ theme }) => theme.colors.bg};
   text-align: center;
 

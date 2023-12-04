@@ -15,10 +15,12 @@ export default Footer;
 
 const FooterBlock = styled.footer<{ $isDarkMode: boolean }>`
   background-color: ${({ theme }) => theme.colors.gnb};
-  ${({ $isDarkMode, theme }) =>
-    css`
-      border-top: 1px solid #ebebeb;
-    ` || $isDarkMode}
+  ${({ $isDarkMode }) =>
+    $isDarkMode
+      ? ""
+      : css`
+          border-top: 1px solid #ebebeb;
+        `}
 
   p {
     ${({ theme }) => theme.width[1280]}
