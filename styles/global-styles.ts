@@ -17,6 +17,21 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+
+  /* *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background-color: ${({ theme }) => theme.colors.bg};
+  } */
+
   section {
     padding-top: 100px;
     padding-bottom: 100px;
