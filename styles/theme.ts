@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 const lightColors = {
-  bg: "#fff",
+  bg: "#fefefe",
   gnb: "#fff",
   text: "#2D373B",
   primary: "#F5467A",
@@ -14,6 +14,12 @@ const darkColors = {
   text: "#f6f6f6",
   primary: "#ACEA6E",
   border: "#c4c4c4",
+};
+
+const commonColors = {
+  black: "#222",
+  grey: "#555",
+  white: "#efefef",
 };
 
 const fontSize = {
@@ -54,12 +60,14 @@ const width = {
 
 export type LightColorTypes = typeof lightColors;
 export type DarkColorTypes = typeof darkColors;
+export type CommonColorTypes = typeof commonColors;
 export type FontSizeTypes = typeof fontSize;
 export type MediaQueryTypes = typeof media;
 export type WidthTypes = typeof width;
 
 export const darkTheme: DefaultTheme = {
   colors: darkColors,
+  commonColors,
   media,
   fontSize,
   width,
@@ -67,6 +75,7 @@ export const darkTheme: DefaultTheme = {
 
 export const lightTheme: DefaultTheme = {
   colors: lightColors,
+  commonColors,
   media,
   fontSize,
   width,

@@ -12,11 +12,8 @@ function Modal({ onClick, children }: ModalTypes) {
     <>
       <ModalBGBlock onClick={onClick} />
       <ModalBlock>
-        <ModalContenBlock>
-          {children}
-
-          <Button onClick={onClick}>닫기</Button>
-        </ModalContenBlock>
+        {children}
+        <Button onClick={onClick}>닫기</Button>
       </ModalBlock>
     </>
   );
@@ -39,22 +36,16 @@ const ModalBlock = styled.div`
   top: 50%;
   left: 50%;
   width: 60%;
-  height: 70%;
-  padding: 40px 0;
-  border-radius: 20px;
+  max-height: 100%;
+  padding: 40px 24px 40px 40px;
   transform: translate(-50%, -50%);
   background-color: ${({ theme }) => theme.colors.gnb};
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   z-index: 301;
-`;
-
-const ModalContenBlock = styled.div`
-  height: 100%;
-  padding: 0 40px;
-  overflow-y: auto;
+  overflow-y: scroll;
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 24px;
   }
 
   &::-webkit-scrollbar-track {
@@ -63,29 +54,8 @@ const ModalContenBlock = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
+    border: 8px solid ${({ theme }) => theme.colors.gnb};
     border-radius: 999px;
     background-color: ${({ theme }) => theme.colors.primary};
-  }
-`;
-
-const ModalCloseBtn = styled.button`
-  box-sizing: content-box;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  padding: 4px;
-  background-color: transparent;
-  border: none;
-  transition: all 0.3s;
-
-  svg path {
-    fill: ${({ theme }) => theme.colors.text};
-  }
-
-  &:hover {
-    transform: rotate(180deg);
-    transition: all 0.3s;
   }
 `;
