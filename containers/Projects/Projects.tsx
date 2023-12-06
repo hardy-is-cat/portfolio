@@ -4,7 +4,7 @@ import ProjectCards from "./ProjectCards";
 
 function Projects() {
   return (
-    <section>
+    <section id="projects">
       <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
         프로젝트
       </SectionTitle>

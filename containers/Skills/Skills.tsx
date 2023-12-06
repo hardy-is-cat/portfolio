@@ -4,7 +4,7 @@ import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function Skills() {
   return (
-    <section>
+    <section id="skills">
       <Title {...useScrollFadeIn<HTMLHeadingElement>()}>보유 기술</Title>
       <Accodian />
     </section>

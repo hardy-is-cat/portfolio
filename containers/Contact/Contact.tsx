@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Contact() {
   return (
-    <SectionBlock>
+    <SectionBlock id="contact">
       <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
         연락처
       </SectionTitle>

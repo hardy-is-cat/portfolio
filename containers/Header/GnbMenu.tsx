@@ -24,13 +24,19 @@ function GnbMenu() {
             </button>
           </li>
           <li>
-            <button type="button">보유 기술</button>
+            <button type="button" onClick={() => scrollToHash("skills")}>
+              보유 기술
+            </button>
           </li>
           <li>
-            <button type="button">프로젝트</button>
+            <button type="button" onClick={() => scrollToHash("projects")}>
+              프로젝트
+            </button>
           </li>
           <li>
-            <button type="button">연락처</button>
+            <button type="button" onClick={() => scrollToHash("contact")}>
+              연락처
+            </button>
           </li>
         </ul>
       </GnbMenuWrapper>
@@ -78,6 +84,23 @@ const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
     margin-bottom: 24px;
     font-weight: 300;
     color: inherit;
+    transition: all 0.1s;
     cursor: pointer;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 2px;
+      margin-top: 4px;
+      background-color: ${({ theme }) => theme.colors.primary};
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 `;
