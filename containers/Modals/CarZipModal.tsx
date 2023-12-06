@@ -3,96 +3,84 @@ import styled from "styled-components";
 import Gallery from "@/components/Gallery";
 import { projectImgData } from "pages/api/Data";
 
-function MovieDogModal() {
+function CarZipModal() {
   return (
     <>
-      <H3Block>Next.js 사이드프로젝트 - 무비독(moviedog)</H3Block>
+      <H3Block>리액트 팀프로젝트 - 카집(CarZip)</H3Block>
       <HrBlock />
       <DlBlock>
         <div>
           <dt>소개</dt>
-          <dd>
-            TMDB 영화정보 api를 이용한 영화정보 조회 및 리뷰 작성 서비스(반응형)
-          </dd>
+          <dd>공공데이터와 카카오맵API를 이용한 주차장 정보 공유 서비스</dd>
         </div>
         <div>
           <dt>진행기간</dt>
-          <dd>2023.09.05 ~ 2023.11.25</dd>
+          <dd>2023.03.09 ~ 2023.03.28</dd>
         </div>
         <div>
           <dt>사용 기술</dt>
           <dd className="skills">
-            <span>TypeScript</span>
-            <span>Next.js</span>
-            <span>Styled-Components</span>
+            <span>React</span>
+            <span>Vite</span>
             <span>Firebase</span>
-            <span>Swiper.js</span>
+            <span>Styled-Components</span>
+            <span>EsLint</span>
+            <span>Prettier</span>
           </dd>
         </div>
         <div>
           <dt>바로가기</dt>
           <dd>
-            <Link href="https://github.com/movie-dog/movie-dog">깃허브</Link>
+            <Link href="https://github.com/LikeLion-FE-Final-Project03/car-zip">
+              깃허브
+            </Link>
             {", "}
-            <Link href="movie-dog.vercel.app">배포사이트</Link>
+            <Link href="https://docs.google.com/presentation/d/10ZIoQ7_o5HqIxnhy2IyQqxFqRTypoNFluwr22lURGCE/edit#slide=id.g1f9f45324dc_0_109">
+              발표자료
+            </Link>
           </dd>
         </div>
       </DlBlock>
       <HrBlock />
-      <Gallery imgData={projectImgData.movieDog} />
+      <Gallery imgData={projectImgData.carZip} />
       <WorkListTitle>담당 내용</WorkListTitle>
       <WorkListBlock>
+        <li>- 팀의 조장을 맡아 역할 분배</li>
         <li>- 와이어 프레임 작성, 피그마 시안 작업</li>
         <li>
-          - 메인페이지
+          - 주차장 정보 상세보기 페이지
           <ul>
             <li>
-              - TMBD api에서 불러온 정보와 파이어베이스에 저장한 리뷰 정보를
-              swiper.js로 제작한 메인 비주얼과 카드 형식의 스와이퍼에 출력
+              - 이전 페이지에서 주차장의 고유 ID를 props로 받아와 파이어
+              베이스에 저장된 주차장 데이터 로드 후 랜더링
             </li>
-            <li>- 스와이퍼 커스터마이징</li>
+            <li>
+              - 즐겨찾기 데이터 베이스를 생성해 주차장 고유 ID와 즐겨찾기 여부,
+              사용자 UID 저장
+            </li>
+            <li>- Clipboard API 를 이용하여 해당 주차장의 주소 복사</li>
+            <li>
+              - 유저의 디바이스 정보를 확인하여 pc와 모바일의 전화 동작을 구분
+            </li>
           </ul>
         </li>
         <li>
-          - 장르별 영화 카테고리 페이지
+          - 주차비 사전 계산 페이지
           <ul>
             <li>
-              - 장르별로 나뉘어진 영화를 볼 수 있도록 카테고리 형식으로 나눔
+              - 주차장 가격 정보를 받아와 사용자가 시간을 입력하면 예상 주차비를
+              계산
             </li>
-            <li>- 페이지네이션 컴포넌트 제작</li>
+            <li>- 주차비 정보가 없을 경우 계산 불가 텍스트를 조건부 랜더링</li>
           </ul>
         </li>
-        <li>
-          - 영화정보 상세페이지
-          <ul>
-            <li>- 영화의 고유 id를 전달받아 해당 영화의 정보를 랜더링</li>
-            <li>
-              - 로그인 여부에 따라 한 줄 평, 찜 기능을 사용할 수 있게 나눔.
-              로그아웃 상태라면 로그인 알림
-            </li>
-            <li>
-              - 별점을 선택한 후, 한 줄 평을 작성하면 파이어베이스에 저장, 이후
-              한 줄 평 재작성시 이전 리뷰정보를 불러와 수정 가능
-            </li>
-            <li>
-              - 한 줄 평 작성시 영화 고유 id를 함께 저장하여, 하단 스와이퍼에
-              해당 영화의 한 줄 평만 출력
-            </li>
-            <li>- TMDB에서 자체 제공하는 비슷한 영화 스와이퍼 출력</li>
-          </ul>
-        </li>
-        <li>
-          - 검색 페이지
-          <ul>
-            <li>- 영화의 제목으로 검색 가능한 기능 구현</li>
-          </ul>
-        </li>
+        <li>- 스타일드 컴포넌트를 이용한 CSS 적용</li>
       </WorkListBlock>
     </>
   );
 }
 
-export default MovieDogModal;
+export default CarZipModal;
 
 const HrBlock = styled.hr`
   margin: 20px 0;

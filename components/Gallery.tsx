@@ -51,7 +51,7 @@ const CurrentImgWrapper = styled.div`
   transition: all 0.2s;
 
   img {
-    object-fit: cover;
+    object-fit: contain;
     transition: all 0.3s;
   }
 `;
