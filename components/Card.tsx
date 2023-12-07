@@ -1,19 +1,23 @@
-import Image from "next/image";
-import styled from "styled-components";
-import IconArrow from "./IconArrow";
-import useModal from "utils/hooks/useModal";
+import { useRecoilValue } from "recoil";
+import { darkModeState } from "stores/atom";
 import { ReactNode } from "react";
+import styled from "styled-components";
+
+import IconArrow from "./IconArrow";
 import Modal from "./Modal";
+import useModal from "utils/hooks/useModal";
 
 type CardTypes = {
   imgSrc: string;
+  imgSize?: number;
   title: string;
   BGcolor: string;
   children?: ReactNode;
 };
 
-function Card({ imgSrc, title, BGcolor, children }: CardTypes) {
+function Card({ imgSrc, imgSize = 100, title, BGcolor, children }: CardTypes) {
   const { modal, toggleModal } = useModal(title);
+  const isDarkMode = useRecoilValue(darkModeState);
 
   return (
     <>
@@ -21,11 +25,11 @@ function Card({ imgSrc, title, BGcolor, children }: CardTypes) {
         <Modal onClick={() => toggleModal(modal.isOpened)}>{children}</Modal>
       )}
       <CardBlock $BGcolor={BGcolor} onClick={() => toggleModal(modal.isOpened)}>
-        <ContentWrapper $imgSrc={imgSrc}>
+        <ContentWrapper $imgSrc={imgSrc} $imgSize={imgSize}>
           <h3>{title}</h3>
         </ContentWrapper>
         <HoverBG className="hover-bg" $BGcolor={BGcolor}>
-          <p>프로젝트 보기</p>
+          <p>{isDarkMode ? "프로젝트 보기" : "사진 보기"}</p>
           <IconArrow size={14} direction="right" color="white" />
         </HoverBG>
       </CardBlock>
@@ -35,7 +39,7 @@ function Card({ imgSrc, title, BGcolor, children }: CardTypes) {
 
 export default Card;
 
-const CardBlock = styled.button<{ $BGcolor: string }>`
+const CardBlock = styled.div<{ $BGcolor: string }>`
   position: relative;
   width: calc(100% / 3);
   padding: 24px;
@@ -83,14 +87,14 @@ const HoverBG = styled.div<{ $BGcolor: string }>`
   }
 `;
 
-const ContentWrapper = styled.div<{ $imgSrc: string }>`
+const ContentWrapper = styled.div<{ $imgSrc: string; $imgSize: number }>`
   position: relative;
   padding-bottom: 100%;
   text-transform: uppercase;
   background-image: url(${({ $imgSrc }) => $imgSrc});
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: ${({ $imgSize }) => $imgSize + "%"};
 
   h3 {
     position: absolute;

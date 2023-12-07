@@ -1,9 +1,10 @@
-import { useRecoilState } from "recoil";
-import { gnbState } from "stores/atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { darkModeState, gnbState } from "stores/atom";
 import styled from "styled-components";
 import scrollToHash from "utils/scrollToHash";
 
 function GnbMenu() {
+  const IsDarkMode = useRecoilValue(darkModeState);
   const [isGnbOpened, setIsGnbOpened] = useRecoilState(gnbState);
   return (
     <>
@@ -20,17 +21,17 @@ function GnbMenu() {
           </li>
           <li>
             <button type="button" onClick={() => scrollToHash("introduce")}>
-              어떤 개발자인가요?
+              {IsDarkMode ? "어떤 개발자인가요?" : "어떤 사람인가요?"}
             </button>
           </li>
           <li>
             <button type="button" onClick={() => scrollToHash("skills")}>
-              보유 기술
+              {IsDarkMode ? "보유 기술" : "보유 품목"}
             </button>
           </li>
           <li>
             <button type="button" onClick={() => scrollToHash("projects")}>
-              프로젝트
+              {IsDarkMode ? "프로젝트" : "갤러리"}
             </button>
           </li>
           <li>

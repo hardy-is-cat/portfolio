@@ -1,45 +1,27 @@
 import styled from "styled-components";
-
-import AccodianEl from "./AccordianEl";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 import AccordianEl from "./AccordianEl";
 
-const skills = [
-  {
-    title: "React",
-    content:
-      "재사용성을 고려한 컴포넌트를 만들고 조합하여 유지보수가 용이한 UI를 구현할 수 있습니다. 커스텀 hooks를 만들어 반복되는 로직을 재사용 할 수 있습니다.",
-  },
-  {
-    title: "React",
-    content:
-      "재사용성을 고려한 컴포넌트를 만들고 조합하여 유지보수가 용이한 UI를 구현할 수 있습니다. 커스텀 hooks를 만들어 반복되는 로직을 재사용 할 수 있습니다.",
-  },
-  {
-    title: "React",
-    content:
-      "재사용성을 고려한 컴포넌트를 만들고 조합하여 유지보수가 용이한 UI를 구현할 수 있습니다. 커스텀 hooks를 만들어 반복되는 로직을 재사용 할 수 있습니다.",
-  },
-  {
-    title: "React",
-    content:
-      "재사용성을 고려한 컴포넌트를 만들고 조합하여 유지보수가 용이한 UI를 구현할 수 있습니다. 커스텀 hooks를 만들어 반복되는 로직을 재사용 할 수 있습니다.",
-  },
-];
+type AccordianTypes = {
+  data: {
+    title: string;
+    content: string;
+  }[];
+};
 
-function Accodian() {
+function Accordian({ data }: AccordianTypes) {
   return (
     <DlBlock {...useScrollFadeIn<HTMLDListElement>()}>
-      {skills.map((skill, i) => {
+      {data.map((data, i) => {
         return (
-          <AccordianEl key={i} title={skill.title} content={skill.content} />
+          <AccordianEl key={i} title={data.title} content={data.content} />
         );
       })}
     </DlBlock>
   );
 }
 
-export default Accodian;
+export default Accordian;
 
 const DlBlock = styled.dl`
   max-width: 820px;

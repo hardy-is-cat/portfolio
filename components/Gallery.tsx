@@ -12,25 +12,21 @@ function Gallery({ imgData }: GalleryTypes) {
   const [mainImg, setMainImg] = useState(imgData[0]);
 
   const convertAltMessage = (fileName: string): string => {
-    return fileName.split("screenshot-")[1].split("-")[0];
+    return fileName.split("-")[1].split(".")[0];
   };
 
-  const projectName = convertAltMessage(imgData[0]);
+  const fileName = convertAltMessage(imgData[0]);
 
   return (
     <div>
       <CurrentImgWrapper>
-        <Image src={mainImg} fill alt={`${projectName}의 스크린샷`} />
+        <Image src={mainImg} fill alt={`${fileName}의 이미지`} />
       </CurrentImgWrapper>
       <ThumList>
         {imgData.map((imgsrc, i) => {
           return (
             <ThumItem onClick={() => setMainImg(imgsrc)}>
-              <Image
-                src={imgsrc}
-                fill
-                alt={`${projectName}의 ${i}번째 스크린샷`}
-              />
+              <Image src={imgsrc} fill alt={`${fileName}의 ${i}번째 이미지`} />
               <FaSearchPlus className="icon-search-plus" size={36} />
             </ThumItem>
           );
@@ -59,11 +55,13 @@ const CurrentImgWrapper = styled.div`
 const ThumList = styled.ul`
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 `;
 
 const ThumItem = styled.li`
   position: relative;
-  width: 100%;
+  min-width: calc((100% - 10px * 3) / 4);
   height: 100px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   cursor: pointer;

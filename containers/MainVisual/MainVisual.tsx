@@ -1,12 +1,17 @@
+import { useRecoilValue } from "recoil";
+import { darkModeState } from "stores/atom";
 import styled from "styled-components";
+
 import IconScroll from "./IconScroll";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
+  const IsDarkMode = useRecoilValue(darkModeState);
+
   return (
     <MainVisualWrapper id="main-visual">
       <p {...useScrollFadeIn<HTMLParagraphElement>()}>
-        엉덩이가 무거운 개발자
+        {IsDarkMode ? "엉덩이가 무거운 개발자" : "요리와 하디를 좋아하는"}
         <br />
         조정현입니다.
       </p>

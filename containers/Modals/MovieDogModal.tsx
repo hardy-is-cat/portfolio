@@ -139,7 +139,7 @@ const DlBlock = styled.dl`
 `;
 
 const WorkListTitle = styled.h4`
-  margin: 24px 0 12px;
+  margin-bottom: 12px;
   font-size: ${({ theme }) => theme.fontSize.headline4};
   font-weight: 700;
 `;
