@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Gallery from "@/components/Gallery";
-import { GalleryContentTypes } from "pages/api/data";
+import { GalleryContentTypes } from "pages/api/data.ts";
 
 type ModalContentTypes = {
   content: GalleryContentTypes;

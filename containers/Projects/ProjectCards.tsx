@@ -5,7 +5,7 @@ import taing from "public/images/logo-taing.png";
 import movieDog from "public/images/logo-moviedog.png";
 import Card from "@/components/Card";
 import ProjectContent from "containers/Modals/ProjectContent";
-import { projectModalContent } from "pages/api/data";
+import { projectModalContent } from "pages/api/data.ts";
 
 function ProjectCards() {
   return (

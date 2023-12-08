@@ -5,7 +5,7 @@ import Accordian from "@/components/Accordian";
 import Title from "@/components/SectionTitle";
 
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
-import { skillsDev, skillsNormal } from "pages/api/data";
+import { skillsDev, skillsNormal } from "pages/api/data.ts";
 
 function Skills() {
   const IsDarkMode = useRecoilValue(darkModeState);

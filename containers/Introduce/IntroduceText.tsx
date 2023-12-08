@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState, introduceTitleState } from "stores/atom";
 import styled, { css } from "styled-components";
-import { introduceTextDev, introduceTextNormal } from "pages/api/data";
+import { introduceTextDev, introduceTextNormal } from "pages/api/data.ts";
 
 function IntroduceText() {
   const appearIntroduce = useRecoilValue(introduceTitleState);
