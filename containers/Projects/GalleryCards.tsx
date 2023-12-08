@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Card from "@/components/Card";
-import { galleryModalContent } from "pages/api/data.ts";
+import { galleryModalContent } from "pages/api/data";
 import GalleryContent from "containers/Modals/GalleryContent";
 
 function GalleryCards() {
