@@ -44,7 +44,7 @@ const media = {
   mobile: customMediaQuery(360),
 };
 
-const customWidth = (maxWidth: number): string => {
+const customFlexWidth = (maxWidth: number): string => {
   return `display: flex;
   flex-flow: row;
   justify-content: center;
@@ -53,9 +53,9 @@ const customWidth = (maxWidth: number): string => {
   margin: 0 auto;`;
 };
 
-const width = {
-  custom: customWidth,
-  1280: customWidth(1280),
+const flexWidth = {
+  custom: customFlexWidth,
+  1280: customFlexWidth(1280),
 };
 
 export type LightColorTypes = typeof lightColors;
@@ -63,14 +63,14 @@ export type DarkColorTypes = typeof darkColors;
 export type CommonColorTypes = typeof commonColors;
 export type FontSizeTypes = typeof fontSize;
 export type MediaQueryTypes = typeof media;
-export type WidthTypes = typeof width;
+export type FlexWidthTypes = typeof flexWidth;
 
 export const darkTheme: DefaultTheme = {
   colors: darkColors,
   commonColors,
   media,
   fontSize,
-  width,
+  flexWidth,
 };
 
 export const lightTheme: DefaultTheme = {
@@ -78,5 +78,5 @@ export const lightTheme: DefaultTheme = {
   commonColors,
   media,
   fontSize,
-  width,
+  flexWidth,
 };

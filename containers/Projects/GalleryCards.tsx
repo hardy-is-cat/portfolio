@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 import Card from "@/components/Card";
-import FoodModal from "containers/Modals/FoodModal";
-import HardyModal from "containers/Modals/HardyModal";
-import ZualModal from "containers/Modals/ZualModal";
+import { galleryModalContent } from "pages/api/data";
+import GalleryContent from "containers/Modals/GalleryContent";
 
 function GalleryCards() {
   return (
@@ -14,7 +13,7 @@ function GalleryCards() {
         title="food"
         BGcolor="#de334f"
       >
-        <FoodModal />
+        <GalleryContent content={galleryModalContent.food} />
       </Card>
       <Card
         imgSrc="/images/icon-cat.svg"
@@ -22,7 +21,7 @@ function GalleryCards() {
         title="hardy"
         BGcolor="#3C454C"
       >
-        <HardyModal />
+        <GalleryContent content={galleryModalContent.hardy} />
       </Card>
       <Card
         imgSrc="/images/icon-woman.svg"
@@ -30,7 +29,7 @@ function GalleryCards() {
         title="zual"
         BGcolor="#aa40d4"
       >
-        <ZualModal />
+        <GalleryContent content={galleryModalContent.zual} />
       </Card>
     </CardList>
   );
@@ -39,5 +38,7 @@ function GalleryCards() {
 export default GalleryCards;
 
 const CardList = styled.div`
-  ${({ theme }) => theme.width[1280]}
+  ${({ theme }) => theme.flexWidth[1280]}
+  justify-content: flex-start;
+  flex-wrap: wrap;
 `;

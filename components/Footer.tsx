@@ -23,7 +23,7 @@ const FooterBlock = styled.footer<{ $isDarkMode: boolean }>`
         `}
 
   p {
-    ${({ theme }) => theme.width[1280]}
+    ${({ theme }) => theme.flexWidth[1280]}
     text-transform: uppercase;
   }
 `;

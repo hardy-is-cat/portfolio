@@ -24,6 +24,7 @@ function Accordian({ data }: AccordianTypes) {
 export default Accordian;
 
 const DlBlock = styled.dl`
-  max-width: 820px;
+  max-width: 860px;
+  padding: 0 20px;
   margin: 0 auto;
 `;

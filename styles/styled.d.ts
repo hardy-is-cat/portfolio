@@ -4,8 +4,8 @@ import {
   LightColorTypes,
   FontSizeTypes,
   MediaQueryTypes,
-  WidthTypes,
   CommonColorTypes,
+  FlexWidthTypes,
 } from "./theme";
 
 declare module "styled-components" {
@@ -14,6 +14,6 @@ declare module "styled-components" {
     commonColors: CommonColorTypes;
     fontSize: FontSizeTypes;
     media: MediaQueryTypes;
-    width: WidthTypes;
+    flexWidth: FlexWidthTypes;
   }
 }

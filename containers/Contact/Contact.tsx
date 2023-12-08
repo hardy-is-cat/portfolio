@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function Contact() {
   return (
-    <SectionBlock id="contact">
+    <section id="contact">
       <SectionTitle {...useScrollFadeIn<HTMLHeadingElement>()}>
         연락처
       </SectionTitle>
@@ -30,20 +30,17 @@ function Contact() {
           </Link>
         </p>
       </ContactWrapper>
-    </SectionBlock>
+    </section>
   );
 }
 
 export default Contact;
 
-const SectionBlock = styled.section`
-  ${({ theme }) => theme.width[1280]}
+const ContactWrapper = styled.div`
+  ${({ theme }) => theme.flexWidth[1280]}
   flex-flow: column;
   align-items: center;
-  padding-bottom: 100px;
-`;
 
-const ContactWrapper = styled.div`
   p {
     display: flex;
     justify-content: flex-start;
@@ -52,6 +49,16 @@ const ContactWrapper = styled.div`
     margin-bottom: 20px;
     font-size: ${({ theme }) => theme.fontSize.headline2};
     font-weight: 400;
+
+    ${({ theme }) => theme.media.mobile} {
+      gap: 4px;
+
+      svg {
+        transform: scale(80%);
+      }
+
+      font-size: ${({ theme }) => theme.fontSize.headline4};
+    }
   }
 
   svg path {

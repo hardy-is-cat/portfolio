@@ -46,6 +46,14 @@ const CurrentImgWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: all 0.2s;
 
+  ${({ theme }) => theme.media.mobile} {
+    height: 200px;
+  }
+
+  ${({ theme }) => theme.media.tablet} {
+    height: 260px;
+  }
+
   img {
     object-fit: contain;
     transition: all 0.3s;
@@ -65,6 +73,16 @@ const ThumItem = styled.li`
   height: 100px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   cursor: pointer;
+
+  ${({ theme }) => theme.media.mobile} {
+    height: 60px;
+    min-width: calc((100% - 10px * 1) / 2);
+  }
+
+  ${({ theme }) => theme.media.tablet} {
+    height: 80px;
+    min-width: calc((100% - 10px * 1) / 2);
+  }
 
   img {
     object-fit: cover;

@@ -1,25 +1,23 @@
 import styled from "styled-components";
 
-import Card from "@/components/Card";
-import MovieDogModal from "containers/Modals/MovieDogModal";
-
 import carZip from "public/images/logo-carzip.png";
 import taing from "public/images/logo-taing.png";
 import movieDog from "public/images/logo-moviedog.png";
-import CarZipModal from "containers/Modals/CarZipModal";
-import TaingModal from "containers/Modals/TaingModal";
+import Card from "@/components/Card";
+import ProjectContent from "containers/Modals/ProjectContent";
+import { projectModalContent } from "pages/api/data";
 
 function ProjectCards() {
   return (
     <CardList>
       <Card imgSrc={movieDog.src} title="movieDog" BGcolor="#C58555">
-        <MovieDogModal />
+        <ProjectContent content={projectModalContent.movieDog} />
       </Card>
       <Card imgSrc={carZip.src} title="carzip" BGcolor="#3C454C">
-        <CarZipModal />
+        <ProjectContent content={projectModalContent.carZip} />
       </Card>
       <Card imgSrc={taing.src} title="taing" BGcolor="#FF153C">
-        <TaingModal />
+        <ProjectContent content={projectModalContent.taing} />
       </Card>
     </CardList>
   );
@@ -28,5 +26,7 @@ function ProjectCards() {
 export default ProjectCards;
 
 const CardList = styled.div`
-  ${({ theme }) => theme.width[1280]}
+  ${({ theme }) => theme.flexWidth[1280]}
+  justify-content: flex-start;
+  flex-wrap: wrap;
 `;

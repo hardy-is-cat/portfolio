@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState, introduceTitleState } from "stores/atom";
 import styled, { css } from "styled-components";
-import { introduceTextDev, introduceTextNormal } from "pages/api/Data";
+import { introduceTextDev, introduceTextNormal } from "pages/api/data";
 
 function IntroduceText() {
   const appearIntroduce = useRecoilValue(introduceTitleState);
@@ -58,6 +58,7 @@ const TextWrapper = styled.div<{ $appearIntroduce: boolean }>`
     margin-bottom: 8px;
     font-size: ${({ theme }) => theme.fontSize.headline3};
     font-weight: 600;
+    line-height: 1.3;
   }
 
   h3::after {
@@ -93,4 +94,10 @@ const TextWrapper = styled.div<{ $appearIntroduce: boolean }>`
         }
       }
     `}
+
+  ${({ theme }) => theme.media.mobile} {
+    h3 {
+      font-size: ${({ theme }) => theme.fontSize.headline4};
+    }
+  }
 `;

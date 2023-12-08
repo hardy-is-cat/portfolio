@@ -44,6 +44,16 @@ const ModalBlock = styled.div`
   z-index: 301;
   overflow-y: scroll;
 
+  ${({ theme }) => theme.media.tablet} {
+    width: 70%;
+    padding: 40px 20px;
+  }
+
+  ${({ theme }) => theme.media.mobile} {
+    width: 90%;
+    padding: 40px 20px;
+  }
+
   &::-webkit-scrollbar {
     width: 24px;
   }

@@ -48,6 +48,14 @@ const CardBlock = styled.div<{ $BGcolor: string }>`
   cursor: pointer;
   color: white;
 
+  ${({ theme }) => theme.media.tablet} {
+    width: 50%;
+  }
+
+  ${({ theme }) => theme.media.mobile} {
+    width: 100%;
+  }
+
   &:hover .hover-bg {
     opacity: 1;
     transition: all 0.2s;

@@ -22,4 +22,9 @@ const SectionTitleBlock = styled.h2`
   color: ${({ theme }) => theme.colors.text};
   text-align: center;
   margin-bottom: 100px;
+
+  ${({ theme }) => theme.media.mobile} {
+    font-size: ${({ theme }) => theme.fontSize.headline1};
+    margin-bottom: 40px;
+  }
 `;

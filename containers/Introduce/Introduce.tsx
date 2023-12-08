@@ -70,8 +70,14 @@ function Introduce() {
 export default Introduce;
 
 const IntroduceBlock = styled.div`
-  ${({ theme }) => theme.width[1280]}
+  ${({ theme }) => theme.flexWidth[1280]}
+  align-items: center;
   gap: 140px;
+
+  ${({ theme }) => theme.media.mobile} {
+    flex-flow: column;
+    gap: 40px;
+  }
 `;
 
 const PictureBlock = styled.div`
@@ -80,5 +86,6 @@ const PictureBlock = styled.div`
   img {
     display: block;
     border-radius: 999px;
+    margin: 0 auto;
   }
 `;
