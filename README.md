@@ -4,6 +4,7 @@
 
 - React : 18
 - Next.js : 14.0.3
+- Recoil : 0.7.7
 - Styled-Components : 6.1.1
 - Styled-Reset : 4.5.1
 - TypeScript : 5
