@@ -31,6 +31,7 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+
   render(): JSX.Element {
     return (
       <Html>

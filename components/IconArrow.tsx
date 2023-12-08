@@ -13,8 +13,8 @@ function IconArrow({
   color,
   className,
 }: IconArrowTypes) {
-  const directionToDeg = (direction: string) => {
-    switch (direction) {
+  const directionToDeg = (calcDirection: string) => {
+    switch (calcDirection) {
       case "up":
         return -45 + "deg";
       case "right":

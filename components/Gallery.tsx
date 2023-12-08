@@ -25,7 +25,7 @@ function Gallery({ imgData }: GalleryTypes) {
       <ThumList>
         {imgData.map((imgsrc, i) => {
           return (
-            <ThumItem onClick={() => setMainImg(imgsrc)}>
+            <ThumItem key={i} onClick={() => setMainImg(imgsrc)}>
               <Image src={imgsrc} fill alt={`${fileName}의 ${i}번째 이미지`} />
               <FaSearchPlus className="icon-search-plus" size={36} />
             </ThumItem>

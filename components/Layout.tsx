@@ -14,7 +14,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
     if (localStorage.getItem("darkMode") !== undefined) {
       setIsDarkMode(!!Number(localStorage.getItem("darkMode")));
     }
-  }, []);
+  });
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>

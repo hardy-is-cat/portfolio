@@ -12,9 +12,9 @@ type AccordianTypes = {
 function Accordian({ data }: AccordianTypes) {
   return (
     <DlBlock {...useScrollFadeIn<HTMLDListElement>()}>
-      {data.map((data, i) => {
+      {data.map((item, i) => {
         return (
-          <AccordianEl key={i} title={data.title} content={data.content} />
+          <AccordianEl key={i} title={item.title} content={item.content} />
         );
       })}
     </DlBlock>
