@@ -29,6 +29,6 @@
     "max-lines": ["error", { "max": 300, "skipBlankLines": false }], // 공백을 무시하지않고 최대 라인 300으로 제한
     "no-console": "warn", // console.log를 사용하면 경고함(console.log() 있는 채로 커밋 방지)
     "lines-between-class-members": "off",
-    "no-use-before-define": "warn"
+    "no-use-before-define": "off"
   }
 }
