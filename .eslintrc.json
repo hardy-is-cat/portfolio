@@ -14,12 +14,10 @@
   },
   "ignorePatterns": ["node_modules/"], // eslint 미적용될 폴더나 파일 명시
   "extends": [
-    "airbnb-typescript",
-    "airbnb/hooks",
-    // "next/core-web-vitals",
+    "next/core-web-vitals",
+    "prettier", // eslint-config-prettier prettier와 중복된 eslint 규칙 제거
     "plugin:@typescript-eslint/recommended", // ts 권장
-    "plugin:prettier/recommended", // eslint의 포매팅을 prettier로 사용.
-    "prettier" // eslint-config-prettier prettier와 중복된 eslint 규칙 제거
+    "plugin:prettier/recommended" // eslint의 포매팅을 prettier로 사용.
   ],
   "rules": {
     "react/react-in-jsx-scope": "off", // react 17부턴 import 안해도돼서 기능 끔
@@ -29,6 +27,8 @@
     "no-redeclare": "error", //변수 재선언 금지
     "no-unused-vars": "warn", // 사용하지 않는 변수 금지
     "max-lines": ["error", { "max": 300, "skipBlankLines": false }], // 공백을 무시하지않고 최대 라인 300으로 제한
-    "no-console": "warn" // console.log를 사용하면 경고함(console.log() 있는 채로 커밋 방지)
+    "no-console": "warn", // console.log를 사용하면 경고함(console.log() 있는 채로 커밋 방지)
+    "lines-between-class-members": "off",
+    "no-use-before-define": "off"
   }
 }

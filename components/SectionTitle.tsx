@@ -15,6 +15,8 @@ const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
   }
 );
 
+SectionTitle.displayName = "Section";
+
 export default SectionTitle;
 
 const SectionTitleBlock = styled.h2`
