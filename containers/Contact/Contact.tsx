@@ -50,6 +50,10 @@ const ContactWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.headline2};
     font-weight: 400;
 
+    a {
+      text-align: center;
+    }
+
     ${({ theme }) => theme.media.mobile} {
       gap: 4px;
 

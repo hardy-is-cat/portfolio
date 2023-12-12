@@ -74,6 +74,11 @@ const IntroduceBlock = styled.div`
   align-items: center;
   gap: 140px;
 
+  ${({ theme }) => theme.media.tablet} {
+    flex-flow: column;
+    gap: 40px;
+  }
+
   ${({ theme }) => theme.media.mobile} {
     flex-flow: column;
     gap: 40px;

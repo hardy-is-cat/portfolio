@@ -7,6 +7,16 @@ import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
   const IsDarkMode = useRecoilValue(darkModeState);
+  const convertString = (string: string) => {
+    return string.split("<br/>").map((string) => {
+      return (
+        <span key={string}>
+          {string}
+          <br />
+        </span>
+      );
+    });
+  };
 
   return (
     <MainVisualWrapper id="main-visual">
@@ -26,8 +36,12 @@ const MainVisualWrapper = styled.section`
   position: relative;
   top: 100px;
   width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   height: calc(100vh - 100px);
-  padding: 300px 0;
   margin-bottom: 100px;
   background-color: ${({ theme }) => theme.colors.bg};
   text-align: center;
@@ -35,6 +49,10 @@ const MainVisualWrapper = styled.section`
   p {
     font-size: 48px;
     font-weight: 700;
+
+    ${({ theme }) => theme.media.tablet} {
+      font-size: 32px;
+    }
   }
 `;
 

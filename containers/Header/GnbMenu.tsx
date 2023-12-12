@@ -26,7 +26,7 @@ function GnbMenu() {
           </li>
           <li>
             <button type="button" onClick={() => scrollToHash("skills")}>
-              {IsDarkMode ? "보유 기술" : "보유 품목"}
+              {IsDarkMode ? "보유 기술" : "키워드"}
             </button>
           </li>
           <li>
@@ -85,8 +85,13 @@ const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
     margin-bottom: 24px;
     font-weight: 300;
     color: inherit;
+    text-align: left;
     transition: all 0.1s;
     cursor: pointer;
+
+    ${({ theme }) => theme.media.tablet} {
+      font-size: ${({ theme }) => theme.fontSize.headline3};
+    }
 
     &::after {
       display: block;
