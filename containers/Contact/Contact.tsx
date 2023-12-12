@@ -15,7 +15,7 @@ function Contact() {
       <ContactWrapper {...useScrollFadeIn<HTMLDivElement>()}>
         <p>
           <IconCall />
-          010-7288-5859
+          <a href="tel:010-7288-5859">010-7288-5859</a>
         </p>
         <p>
           <IconEmail />

@@ -47,7 +47,7 @@ function Introduce() {
       <IntroduceBlock ref={introduceRef}>
         <PictureBlock>
           <Image
-            src={IsDarkMode ? "/images/zual.jpeg" : "/images/zual.jpeg"}
+            src={IsDarkMode ? "/images/pic-profile.jpg" : "/images/zual.jpeg"}
             alt="조정현 사진"
             width={300}
             height={300}
