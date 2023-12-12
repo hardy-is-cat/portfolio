@@ -15,7 +15,7 @@ function Contact() {
       <ContactWrapper {...useScrollFadeIn<HTMLDivElement>()}>
         <p>
           <IconCall />
-          010-7288-5859
+          <a href="tel:010-7288-5859">010-7288-5859</a>
         </p>
         <p>
           <IconEmail />
@@ -49,6 +49,10 @@ const ContactWrapper = styled.div`
     margin-bottom: 20px;
     font-size: ${({ theme }) => theme.fontSize.headline2};
     font-weight: 400;
+
+    a {
+      text-align: center;
+    }
 
     ${({ theme }) => theme.media.mobile} {
       gap: 4px;

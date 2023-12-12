@@ -47,7 +47,7 @@ function Introduce() {
       <IntroduceBlock ref={introduceRef}>
         <PictureBlock>
           <Image
-            src={IsDarkMode ? "/images/zual.jpeg" : "/images/zual.jpeg"}
+            src={IsDarkMode ? "/images/pic-profile.jpg" : "/images/zual.jpeg"}
             alt="조정현 사진"
             width={300}
             height={300}
@@ -73,6 +73,11 @@ const IntroduceBlock = styled.div`
   ${({ theme }) => theme.flexWidth[1280]}
   align-items: center;
   gap: 140px;
+
+  ${({ theme }) => theme.media.tablet} {
+    flex-flow: column;
+    gap: 40px;
+  }
 
   ${({ theme }) => theme.media.mobile} {
     flex-flow: column;
