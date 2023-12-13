@@ -1,6 +1,12 @@
-# 프로젝트 초기 설정 브랜치
+# ZUAL'S PORTFOLIO
 
-## 버전정보
+## 내용
+
+`Next.js`와 `Styled-Components` 등을 이용해 만든 포트폴리오입니다.
+개발자로서의 저와 일반인으로서의 저를 다크모드, 라이트모드로 전환할 수 있게 하였습니다.
+반응형으로 만들어졌습니다.
+
+## 사용한 기술
 
 - React : 18
 - Next.js : 14.0.3
@@ -12,12 +18,6 @@
 - ESLint : 8
 - ESLint-Config-Prettier : 9.0.0
 
-## 세팅 내용
+[포트폴리오 보기](https://zual-portfolio.netlify.app/)
 
-- tsconfig 파일 paths로 절대경로 설정
-- Styled-Component + TS 세팅
-- theme, global-styles(reset 포함) 세팅
-- 다크모드, 라이트모드 변수 설정
-- Pretendard 폰트 적용
-- svg파일 컴포넌트로 임포트하도록 설정
-- ESLint, Prettier 설정
+![포트폴리오 첫화면](https://github.com/movie-dog/movie-dog/assets/76080643/96643ee1-6794-4073-88a0-09e66bf9e31d)

@@ -216,8 +216,8 @@ export const projectModalContent: ProjectModalTypes = {
       },
     },
     screenshot: [
-      "/images/screenshot/screenshot-carzip-01.gif",
-      "/images/screenshot/screenshot-carzip-02.gif",
+      "/images/screenshot/screenshot-carzip-01.jpg",
+      "/images/screenshot/screenshot-carzip-02.jpg",
     ],
     description: [
       { title: "팀의 조장을 맡아 역할 분배" },

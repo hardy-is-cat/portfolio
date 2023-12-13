@@ -45,11 +45,6 @@ const ModalBlock = styled.div`
   overflow-y: scroll;
 
   ${({ theme }) => theme.media.tablet} {
-    width: 70%;
-    padding: 40px 20px;
-  }
-
-  ${({ theme }) => theme.media.mobile} {
     width: 90%;
     padding: 40px 20px;
   }
