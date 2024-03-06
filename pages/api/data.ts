@@ -156,7 +156,7 @@ export const projectModalContent: ProjectModalTypes = {
       ],
       link: {
         github: "https://github.com/movie-dog/movie-dog",
-        buildSite: "https://movie-dog.vercel.app/",
+        buildSite: "https://main.drpe221ejddia.amplifyapp.com/",
       },
     },
     screenshot: [
