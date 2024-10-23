@@ -12,7 +12,7 @@ type CardTypes = {
   imgSize?: number;
   title: string;
   BGcolor: string;
-  textColor: string;
+  textColor?: string;
   children?: ReactNode;
 };
 
@@ -21,7 +21,7 @@ function Card({
   imgSize = 100,
   title,
   BGcolor,
-  textColor,
+  textColor = "#fff",
   children,
 }: CardTypes) {
   const { modal, toggleModal } = useModal(title);
