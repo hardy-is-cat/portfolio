@@ -7,16 +7,16 @@ import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
   const IsDarkMode = useRecoilValue(darkModeState);
-  const convertString = (string: string) => {
-    return string.split("<br/>").map((string) => {
-      return (
-        <span key={string}>
-          {string}
-          <br />
-        </span>
-      );
-    });
-  };
+  // const convertString = (string: string) => {
+  //   return string.split("<br/>").map((string) => {
+  //     return (
+  //       <span key={string}>
+  //         {string}
+  //         <br />
+  //       </span>
+  //     );
+  //   });
+  // };
 
   return (
     <MainVisualWrapper id="main-visual">
@@ -24,6 +24,8 @@ function MainVisual() {
         {IsDarkMode ? "엉덩이가 무거운 개발자" : "요리와 하디를 좋아하는"}
         <br />
         조정현입니다.
+        <br />
+        <span>최신 업데이트 날짜_24.10.23</span>
       </p>
       <IconScrollBlock />
     </MainVisualWrapper>
@@ -52,6 +54,11 @@ const MainVisualWrapper = styled.section`
 
     ${({ theme }) => theme.media.tablet} {
       font-size: 32px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
     }
   }
 `;

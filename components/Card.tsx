@@ -12,10 +12,18 @@ type CardTypes = {
   imgSize?: number;
   title: string;
   BGcolor: string;
+  textColor: string;
   children?: ReactNode;
 };
 
-function Card({ imgSrc, imgSize = 100, title, BGcolor, children }: CardTypes) {
+function Card({
+  imgSrc,
+  imgSize = 100,
+  title,
+  BGcolor,
+  textColor,
+  children,
+}: CardTypes) {
   const { modal, toggleModal } = useModal(title);
   const isDarkMode = useRecoilValue(darkModeState);
 
@@ -25,10 +33,14 @@ function Card({ imgSrc, imgSize = 100, title, BGcolor, children }: CardTypes) {
         <Modal onClick={() => toggleModal(modal.isOpened)}>{children}</Modal>
       )}
       <CardBlock $BGcolor={BGcolor} onClick={() => toggleModal(modal.isOpened)}>
-        <ContentWrapper $imgSrc={imgSrc} $imgSize={imgSize}>
+        <ContentWrapper
+          $imgSrc={imgSrc}
+          $imgSize={imgSize}
+          $textColor={textColor}
+        >
           <h3>{title}</h3>
         </ContentWrapper>
-        <HoverBG className="hover-bg" $BGcolor={BGcolor}>
+        <HoverBG className="hover-bg" $BGcolor={BGcolor} $textColor={textColor}>
           <p>{isDarkMode ? "프로젝트 보기" : "사진 보기"}</p>
           <IconArrow size={14} direction="right" color="white" />
         </HoverBG>
@@ -46,7 +58,7 @@ const CardBlock = styled.div<{ $BGcolor: string }>`
   border: none;
   background-color: ${({ $BGcolor }) => $BGcolor};
   cursor: pointer;
-  color: white;
+  /* color: white; */
 
   ${({ theme }) => theme.media.tablet} {
     width: 50%;
@@ -62,7 +74,7 @@ const CardBlock = styled.div<{ $BGcolor: string }>`
   }
 `;
 
-const HoverBG = styled.div<{ $BGcolor: string }>`
+const HoverBG = styled.div<{ $BGcolor: string; $textColor: string }>`
   opacity: 0;
   position: absolute;
   top: 0;
@@ -92,10 +104,15 @@ const HoverBG = styled.div<{ $BGcolor: string }>`
     font-size: ${({ theme }) => theme.fontSize.headline4};
     font-weight: 700;
     z-index: 11;
+    color: ${({ $textColor }) => $textColor};
   }
 `;
 
-const ContentWrapper = styled.div<{ $imgSrc: string; $imgSize: number }>`
+const ContentWrapper = styled.div<{
+  $imgSrc: string;
+  $imgSize: number;
+  $textColor: string;
+}>`
   position: relative;
   padding-bottom: 100%;
   text-transform: uppercase;
@@ -108,5 +125,6 @@ const ContentWrapper = styled.div<{ $imgSrc: string; $imgSize: number }>`
     position: absolute;
     font-size: ${({ theme }) => theme.fontSize.headline3};
     z-index: 11;
+    color: ${({ $textColor }) => $textColor};
   }
 `;

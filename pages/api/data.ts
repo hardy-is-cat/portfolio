@@ -22,9 +22,9 @@ export const skillsDev = [
       "SSR 방식을 이용해 빠른 랜더링을 할 수 있고, 동적 라우팅을 이용해 상황에 따른 url을 빌드할 수 있습니다.",
   },
   {
-    title: "Styled-Components",
+    title: "Styled-Components, TailwindCSS",
     content:
-      "Styled-components의 문법을 이해하여 다양한 컴포넌트의 스타일링을 할 수 있고, 전역 스타일도 쉽게 적용할 수 있습니다.",
+      "Styled-Components와 TailwindCSS의 문법을 이해하여 다양한 컴포넌트의 스타일링을 할 수 있고, 전역 스타일도 쉽게 적용할 수 있습니다.",
   },
   {
     title: "Recoil",
@@ -44,22 +44,22 @@ export const skillsDev = [
 
 export const skillsNormal = [
   {
-    title: "빠른 이해력",
+    title: "빠른 이해력과 분석하는 성격",
     content:
-      "새로운 물건, 새로운 일에 대한 이해가 빠르고 설명서도 꼼꼼히 읽어봅니다. 가구나 데스크탑 등도 직접 조립하는 편.",
+      "새로운 물건, 새로운 일에 대한 이해가 빠르고, 설명서가 있다면 꼼꼼히 읽어봅니다. 가구나 데스크탑 등을 직접 조립하면서 구조를 분석하고 이해하는 것을 좋아합니다.",
   },
   {
     title: "계획형 인간",
     content:
-      "계획을 짜고 그 계획대로 움직이는 것을 좋아합니다. 여행이라도 간다면 일정표 작성은 필수!",
+      "계획을 짜고 그 계획대로 움직이는 것을 좋아합니다. 여행이라도 간다면 분 단위 일정표 작성은 필수!",
   },
   {
     title: "집순이",
     content:
-      "대체로 집에 있는 것을 선호합니다. 맥주, 게임기, 고양이가 있는 집은 그야말로 천국",
+      "일 할 때를 제외하곤 대체로 집에 있는 것을 선호합니다. 이불 밖은 위험해..!",
   },
   {
-    title: "요리 금손",
+    title: "금손",
     content:
       "어떤 요리도 척척. 그 중 자신 있는건 일식, 한식. 맛있는 음식이 있다면 직접 해먹어봐야 직성이 풀리는 성격입니다.",
   },
@@ -69,24 +69,24 @@ export const introduceTextDev = [
   {
     id: 1,
     title: "함께 성장하는 것의 가치를 생각합니다",
-    paragraph: `멋쟁이 사자처럼 프론트엔드스쿨 과정 중<br/>
-    세번의 조장을 거치며 혼자만 잘 하는 것보다<br/>
-    함께 잘 하는 것이 더욱 단단한 성장의 발판이 된다는 것을 느꼈습니다.<br/>
+    paragraph: `멋쟁이사자처럼 프론트엔드스쿨 과정을 거치며<br/>
+    나 혼자만 잘 하는 것보단, 다른 사람의 성장을 돕고<br/>
+    나의 성장도 함게 이루는 과정이 중요하다고 느꼈습니다.<br/>
     멋진 팀원들과 함께 성장해가고 싶습니다.`,
   },
   {
     id: 2,
     title: "웹디자인 업무 경험으로 협업에 강합니다",
-    paragraph: `워드프레스 기반 웹사이트 제작 업체에서의 웹디자인 업무 경험이 있습니다.<br/>
-    또한 리메인 웹프로페셔널 과정을 수강하면서<br/>
-    UX의 중요성과 웹디자인 시스템에 대한 이해도를 길러,<br/>
-    협업에서도 원활한 소통을 이룰 수 있습니다.`,
+    paragraph: `워드프레스 기반 웹사이트 제작 업체에서의 웹디자인 업무와<br/>
+    리메인 웹프로페셔널 과정을 수강하면서<br/>
+    UX의 중요도와 전반적인 웹디자인 시스템에 대한 이해도를 길렀고,<br/>
+    이를 통해 협업시에 보다 원활한 소통을 이룰 수 있습니다.`,
   },
   {
     id: 3,
     title: "사용자의 입장에서 한번 더 생각합니다",
     paragraph: `웹 서비스는 평균 59초만에 사용자에게 평가된다고 합니다.<br/>
-      비대면으로 사용자와 만나는 창구로서,<br/>
+      비대면으로 사용자와 만나는 웹서비스를 구축하는 개발자로서,<br/>
       사용자에게 좋은 인상을 남길 수 있는 서비스를 만들고 싶습니다.`,
   },
 ];
@@ -95,8 +95,8 @@ export const introduceTextNormal = [
   {
     id: 1,
     title: "어디서나 적응 가능한 친화력 보유자",
-    paragraph: `어느 직장, 어느 무리마다 항상 따라오는 성격 좋다는 이야기.<br/>
-    내향형 인간이지만 아무도 믿지 않는 친화력.<br/>
+    paragraph: `어느 곳을 가도 항상 따라오는 그 사람 성격 좋다는 이야기.<br/>
+    내향형 인간이라곤 믿기지 않는 친화력.<br/>
     일단 옆에 두면 재밌는 사람입니다.`,
   },
   {
@@ -109,9 +109,9 @@ export const introduceTextNormal = [
   {
     id: 3,
     title: "넒은 분야의 잡지식인간",
-    paragraph: `다양한 서브컬쳐에 열려있습니다.<br/>
-      특히나 관심있는 분야는 열심히 파고 드는 사람.<br/>
-      술, 음식, 게임, 음악 등등. 새로운 장르는 언제나 환영입니다.`,
+    paragraph: `다양한 잡지식에 열려있습니다.<br/>
+    술, 음식, 게임, 음악 등등<br/>
+    특히나 관심있는 분야는 열심히 파고 드는 오타쿠.`,
   },
 ];
 
@@ -135,12 +135,56 @@ export type ProjectContentTypes = {
 };
 
 type ProjectModalTypes = {
-  movieDog: ProjectContentTypes;
-  carZip: ProjectContentTypes;
-  taing: ProjectContentTypes;
+  [projectName: string]: ProjectContentTypes;
 };
 
 export const projectModalContent: ProjectModalTypes = {
+  jojiju: {
+    title: "Next.js 팀프로젝트 - 조지주(PickYourPotion)",
+    info: {
+      introduce:
+        "調(고를 조), 持(가질 지), 酒(술 주). 간단한 문답을 통해 나에게 맞는 전통주를 추천받고 이를 구매할 수 있는 이커머스 웹사이트입니다.",
+      durationOfWork: "2024.07.29 ~ 2024.08.27",
+      skills: ["TypeScript", "Next.js", "TailwindCSS", "Zustand", "Swiper.js"],
+      link: {
+        github: "https://github.com/FRONTENDSCHOOLPLUS2/PickYourPotion",
+        buildSite: "https://www.pickyourpotion.store",
+      },
+    },
+    screenshot: [
+      "/images/screenshot/screenshot-jojiju-01.png",
+      "/images/screenshot/screenshot-jojiju-02.png",
+      "/images/screenshot/screenshot-jojiju-03.png",
+      "/images/screenshot/screenshot-jojiju-04.png",
+    ],
+    description: [
+      { title: "피그마 UI 디자인 시안 제작" },
+      {
+        title: "나에게 맞는 전통주 찾기",
+        detail: [
+          "최근 유행하는 문답 테스트 방식을 간단하게 구현하여 사용자의 상황에 맞는 술을 추천해주는 랜딩페이지 제작.",
+          "각 선택값에 어울리는 전통주 id를 배열로 관리하고, fetch하여 결과창에 불러옴.",
+          "주량, 당도, 상황 등에 맞는 svg 일러스트 제작 후 이를 컴포넌트화. 각각의 path에 커스텀 애니메이션을 적용.",
+        ],
+      },
+      {
+        title: "메인페이지",
+        detail: [
+          "Swiper.js 라이브러리를 커스텀하여 적용",
+          "상품 카드 공통 컴포넌트 생성",
+        ],
+      },
+      {
+        title: "결제 관련",
+        detail: [
+          "포트원의 본인인증 API를 이용한 성인인증 구현.",
+          "상품 구매시 stateless modal을 이용하여 최초 1회 성인인증을 요구하는 모달창 생성.",
+          "본인인증이 완료되면 포트원 서버에 사용자 정보 요청 후 받아온 생년월일을 계산하여 성인 여부를 판단.",
+          "성인인증이 완료된 유저는 유저 데이터에 isAdult 값을 true로 저장해 추가 인증이 필요하지 않게 함.",
+        ],
+      },
+    ],
+  },
   movieDog: {
     title: "Next.js 사이드팀프로젝트 - 무비독(moviedog)",
     info: {
@@ -170,8 +214,8 @@ export const projectModalContent: ProjectModalTypes = {
       {
         title: "메인페이지",
         detail: [
-          "TMBD api에서 불러온 정보와 파이어베이스에 저장한 리뷰 정보를 swiper.js로 제작한 메인 비주얼과 카드 형식의 스와이퍼에 출력",
-          "스와이퍼 커스터마이징",
+          "Swiper.js 커스터마이징",
+          "Swiper.js로 제작한 메인 비주얼과 카드 스와이퍼에 TMBD API에서 불러온 정보와 파이어베이스에 저장한 리뷰 정보를 출력",
         ],
       },
       {
@@ -187,8 +231,9 @@ export const projectModalContent: ProjectModalTypes = {
           "영화의 고유 id를 전달받아 해당 영화의 정보를 랜더링",
           "로그인 여부에 따라 한 줄 평, 찜 기능을 사용할 수 있게 나눔. 로그아웃 상태라면 로그인 알림",
           "별점을 선택한 후, 한 줄 평을 작성하면 파이어베이스에 저장, 이후 한 줄 평 재작성시 이전 리뷰정보를 불러와 수정 가능",
-          "한 줄 평 작성시 영화 고유 id를 함께 저장하여, 하단 스와이퍼에 해당 영화의 한 줄 평만 출력",
-          "TMDB에서 자체 제공하는 비슷한 영화 스와이퍼 출력",
+          "한 줄 평 작성시 영화 고유 id를 함께 저장하여, 상세페이지 하단 스와이퍼에 해당 영화의 한 줄 평 출력",
+          "TMDB에서 자체 제공하는 비슷한 영화 API를 이용해 스와이퍼 출력",
+          "영화 찜하기, 찜삭제 기능 구현",
         ],
       },
       {
@@ -202,14 +247,7 @@ export const projectModalContent: ProjectModalTypes = {
     info: {
       introduce: "공공데이터와 카카오맵API를 이용한 주차장 정보 공유 서비스",
       durationOfWork: "2023.03.09 ~ 2023.03.28",
-      skills: [
-        "React",
-        "Vite",
-        "Firebase",
-        "Styled-Components",
-        "EsLint",
-        "Prettier",
-      ],
+      skills: ["React", "Vite", "Firebase", "Styled-Components"],
       link: {
         github: "https://github.com/LikeLion-FE-Final-Project03/car-zip",
         presentation:
@@ -236,10 +274,9 @@ export const projectModalContent: ProjectModalTypes = {
         title: "주차비 사전 계산 페이지",
         detail: [
           "주차장 가격 정보를 받아와 사용자가 시간을 입력하면 예상 주차비를 계산",
-          "즐겨찾기 데이터 베이스를 생성해 주차장 고유 ID와 즐겨찾기 여부, 사용자 UID 저장",
+          "주차비 정보가 없을 경우 계산 불가 텍스트를 조건부 랜더링",
         ],
       },
-      { title: "스타일드 컴포넌트를 이용한 CSS 적용" },
     ],
   },
   taing: {
@@ -265,9 +302,9 @@ export const projectModalContent: ProjectModalTypes = {
       {
         title: "조장, 메인페이지",
         detail: [
-          "팀의 조장을 맡아 조원들에게 역할 분배, 팀원들의 코드 리뷰",
+          "팀의 조장을 맡아 조원들에게 역할 분배, 기술 담당으로 코드 리뷰",
           "프로젝트 초기설정(prettier, eslint, 코드 컨벤션, 커밋컨벤션 설정 등) 및 깃허브 협업 방법 검색 및 공유",
-          "swiper.js를 사용해 메인 페이지 슬라이더 구현",
+          "swiper.js를 사용해 메인 페이지 슬라이더 구현, Tab키로 각 슬라이드에 접근 가능하게 설정",
           "data.json 파일을 생성해 슬라이더 내부 컨텐츠를 비동기 통신을 이용하여 랜더링",
           "슬라이더의 각 컨텐츠에 aria-label 속성을 추가하여 접근성 향상",
         ],
@@ -283,14 +320,12 @@ export type GalleryContentTypes = {
 };
 
 type GalleryModalTypes = {
-  food: GalleryContentTypes;
-  hardy: GalleryContentTypes;
-  zual: GalleryContentTypes;
+  [title: string]: GalleryContentTypes;
 };
 
 export const galleryModalContent: GalleryModalTypes = {
   food: {
-    title: "이것저것 만든 음식들",
+    title: "이구역 쩝쩝박사",
     picture: [
       "/images/gallery/pic-food1.jpeg",
       "/images/gallery/pic-food2.jpeg",
@@ -302,7 +337,7 @@ export const galleryModalContent: GalleryModalTypes = {
       "/images/gallery/pic-food8.jpeg",
     ],
     description:
-      "참치 초밥, 일본식 닭튀김, 시메사바 등등 주로 일식위주로 만들어 먹곤 합니다. 스트레스 해소 방법이기도 하고요. 먹는게 제일 좋아요.",
+      "참치 초밥, 일본식 닭튀김, 시메사바 등등 주로 일식 위주의 요리를 자주 합니다. 스트레스 해소 방법이기도 하고요. 먹는 게 제일 좋아요.",
   },
   hardy: {
     title: "최고의 고양이 하디",
@@ -318,7 +353,7 @@ export const galleryModalContent: GalleryModalTypes = {
       "/images/gallery/pic-hardy9.jpeg",
     ],
     description:
-      "세상에서 제일 귀여운 고양이!!!!!! 매주 메일링 서비스 가능합니다. 많관부🙏",
+      "세상에서 제일 귀여운 고양이!!!!!! 올해 6살이고 매일 미모 갱신 중입니다. 매주 메일링 서비스 가능합니다.",
   },
   zual: {
     title: "조정현은 zual입니다",
@@ -328,8 +363,8 @@ export const galleryModalContent: GalleryModalTypes = {
       "/images/gallery/pic-zual3.jpeg",
       "/images/gallery/pic-zual4.jpeg",
     ],
-    description: `zual은 제 별명입니다. 고등학교때 친구가 멍때리는 모습을 보고 침 좔좔 흘릴것 같다고 해서 붙여진 별명인데, 마음에 들어서 계속 쓰고 있습니다.<br/>
-      사진 찍는걸 좋아하고 필름카메라도 좋아합니다. 저번 여름엔 스노클링의 재미를 알아 잡은 조개로 또 이것저것 해먹었습니다.<br/>
-      집에서 음악 듣고 게임 하는 것도 좋아합니다. 인생게임은 몬스터헌터라고...25년에 신작 나오는 게임인데 아신다면 같이 해요...🥺`,
+    description: `타이틀인 ZUAL은 어렸을 때부터 사용한 별명입니다. 고등학교 때 멍 때리는 모습을 보고 친구가 침 좔좔 흘릴 것 같다고 해서 붙여진 별명인데, 마음에 들어서 계속 쓰고 있습니다.<br/>
+      사진 찍는 걸 좋아하고 필름 카메라도 좋아합니다. 필름값이 너무 비싸져 이제는 못하지만...집에서 음악 듣고 게임하는 것도 좋아합니다.<br/>
+      인생 게임은 몬스터헌터 시리즈이고 25년에 신작이 나옵니다. 같이 하실 분은 연락 주세요...🥺`,
   },
 };
