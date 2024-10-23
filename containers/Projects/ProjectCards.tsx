@@ -19,23 +19,13 @@ function ProjectCards() {
       >
         <ProjectContent content={projectModalContent.jojiju} />
       </Card>
-      <Card
-        imgSrc={movieDog.src}
-        title="movieDog"
-        BGcolor="#C58555"
-        textColor="#fff"
-      >
+      <Card imgSrc={movieDog.src} title="movieDog" BGcolor="#C58555">
         <ProjectContent content={projectModalContent.movieDog} />
       </Card>
-      <Card
-        imgSrc={carZip.src}
-        title="carzip"
-        BGcolor="#3C454C"
-        textColor="#fff"
-      >
+      <Card imgSrc={carZip.src} title="carzip" BGcolor="#3C454C">
         <ProjectContent content={projectModalContent.carZip} />
       </Card>
-      <Card imgSrc={taing.src} title="taing" BGcolor="#FF153C" textColor="#fff">
+      <Card imgSrc={taing.src} title="taing" BGcolor="#FF153C">
         <ProjectContent content={projectModalContent.taing} />
       </Card>
     </CardList>
