@@ -147,7 +147,7 @@ export const projectModalContent: ProjectModalTypes = {
       durationOfWork: "2024.07.29 ~ 2024.08.27",
       skills: ["TypeScript", "Next.js", "TailwindCSS", "Zustand", "Swiper.js"],
       link: {
-        github: "https://github.com/FRONTENDSCHOOLPLUS2/PickYourPotion",
+        github: "https://github.com/hardy-is-cat/PickYourPotion",
         buildSite: "https://www.pickyourpotion.store",
       },
     },
