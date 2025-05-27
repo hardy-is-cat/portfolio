@@ -1,13 +1,15 @@
 import { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
 import IconArrow from "./IconArrow";
 
-type AccodianElTypes = {
+type AccordionElTypes = {
   title: string;
   content: string;
 };
 
-function AccordianEl({ title, content }: AccodianElTypes) {
+function AccordionEl({ title, content }: AccordionElTypes) {
   const [isActive, setIsActive] = useState(false);
 
   const toggleDD = () => setIsActive(!isActive);
@@ -23,7 +25,7 @@ function AccordianEl({ title, content }: AccodianElTypes) {
   );
 }
 
-export default AccordianEl;
+export default AccordionEl;
 
 const DTBlock = styled.dt`
   display: flex;

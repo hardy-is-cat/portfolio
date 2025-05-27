@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled, { css } from "styled-components";
+import { css, Theme } from "@emotion/react";
+import styled from "@emotion/styled";
+
 import ViewModeBtn from "../containers/Header/ViewModeBtn";
 import GnbBtn from "../containers/Header/GnbBtn";
 import GnbMenu from "../containers/Header/GnbMenu";
@@ -40,6 +42,26 @@ function Header() {
 
 export default Header;
 
+const scrollStyles = (theme: Theme) => css`
+  height: 72px;
+  padding: 12px;
+
+  h1 {
+    font-size: ${theme.fontSize.headline3};
+  }
+
+  & div[class*="ViewModeBtn"] label {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  & button[class*="GnbBtn"] {
+    width: 40px;
+    height: 40px;
+    padding: 0 8px;
+  }
+`;
+
 const HeaderBlock = styled.header<{ $isScroll: boolean; $isDarkMode: boolean }>`
   position: fixed;
   display: flex;
@@ -53,27 +75,7 @@ const HeaderBlock = styled.header<{ $isScroll: boolean; $isDarkMode: boolean }>`
   transition: all 0.3s;
   z-index: 100;
 
-  ${({ $isScroll }) =>
-    $isScroll &&
-    css`
-      height: 72px;
-      padding: 12px;
-
-      h1 {
-        font-size: ${({ theme }) => theme.fontSize.headline3};
-      }
-
-      & div[class*="ViewModeBtn"] label {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-
-      & button[class*="GnbBtn"] {
-        width: 40px;
-        height: 40px;
-        padding: 0 8px;
-      }
-    `}
+  ${({ $isScroll, theme }) => $isScroll && scrollStyles(theme)}
 
   ${({ $isDarkMode }) =>
     $isDarkMode

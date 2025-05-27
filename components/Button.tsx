@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 type ButtonTypes = {
   children: ReactNode;

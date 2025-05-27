@@ -1,22 +1,12 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import IconScroll from "./IconScroll";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
   const IsDarkMode = useRecoilValue(darkModeState);
-  // const convertString = (string: string) => {
-  //   return string.split("<br/>").map((string) => {
-  //     return (
-  //       <span key={string}>
-  //         {string}
-  //         <br />
-  //       </span>
-  //     );
-  //   });
-  // };
 
   return (
     <MainVisualWrapper id="main-visual">
@@ -52,7 +42,7 @@ const MainVisualWrapper = styled.section`
     font-size: 48px;
     font-weight: 700;
 
-    ${({ theme }) => theme.media.tablet} {
+    ${({ theme }) => theme.mediaQuery.tablet} {
       font-size: 32px;
     }
 

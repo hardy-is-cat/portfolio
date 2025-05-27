@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import Card from "@/components/Card";
 import { galleryModalContent } from "pages/api/data";

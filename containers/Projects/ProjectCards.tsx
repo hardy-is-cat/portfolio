@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import carZip from "public/images/logo-carzip.png";
 import taing from "public/images/logo-taing.png";

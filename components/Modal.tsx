@@ -1,5 +1,5 @@
 import { MouseEventHandler, ReactNode } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Button from "./Button";
 
 type ModalTypes = {
@@ -44,7 +44,7 @@ const ModalBlock = styled.div`
   z-index: 301;
   overflow-y: scroll;
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     width: 90%;
     padding: 40px 20px;
   }

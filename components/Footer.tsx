@@ -1,6 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled, { css } from "styled-components";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 function Footer() {
   const isDarkMode = useRecoilValue(darkModeState);

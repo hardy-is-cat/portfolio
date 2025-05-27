@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 import AccordianEl from "./AccordianEl";
 

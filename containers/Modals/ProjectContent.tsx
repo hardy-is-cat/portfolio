@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Gallery from "@/components/Gallery";
 import { ProjectContentTypes } from "pages/api/data";
 
@@ -82,7 +82,7 @@ const H3Block = styled.h3`
 const DlBlock = styled.dl`
   margin: 40px 0;
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     margin: 12px 0;
   }
 
@@ -91,7 +91,7 @@ const DlBlock = styled.dl`
     display: flex;
     flex-flow: row;
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       flex-flow: column;
     }
   }
@@ -101,7 +101,7 @@ const DlBlock = styled.dl`
     display: inline-block;
     line-height: 1.3;
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       margin-top: 4px;
       margin-bottom: 4px;
     }
@@ -150,7 +150,7 @@ const WorkListBlock = styled.ul`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       margin-left: 0;
     }
   }

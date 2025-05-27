@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "@emotion/styled";
+import { ThemeProvider } from "@emotion/react";
 import { darkTheme, lightTheme } from "styles/theme";
 
 import Header from "./Header";

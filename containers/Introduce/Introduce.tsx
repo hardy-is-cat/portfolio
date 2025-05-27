@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { darkModeState, introduceTitleState } from "stores/atom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import SectionTitle from "@/components/SectionTitle";
 import LinkBtn from "@/components/LinkBtn";
@@ -74,12 +74,12 @@ const IntroduceBlock = styled.div`
   align-items: center;
   gap: 140px;
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     flex-flow: column;
     gap: 40px;
   }
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     flex-flow: column;
     gap: 40px;
   }

@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState } from "stores/atom";
 import { ReactNode } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import IconArrow from "./IconArrow";
 import Modal from "./Modal";
@@ -60,11 +60,11 @@ const CardBlock = styled.div<{ $BGcolor: string }>`
   cursor: pointer;
   /* color: white; */
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     width: 50%;
   }
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     width: 100%;
   }
 

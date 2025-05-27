@@ -1,7 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "@emotion"],
   "parserOptions": {
     "project": "./tsconfig.json",
     "createDefaultProgram": true
@@ -29,6 +29,10 @@
     "max-lines": ["error", { "max": 300, "skipBlankLines": false }], // 공백을 무시하지않고 최대 라인 300으로 제한
     "no-console": "warn", // console.log를 사용하면 경고함(console.log() 있는 채로 커밋 방지)
     "lines-between-class-members": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "@emotion/jsx-import": "error",
+    "@emotion/no-vanilla": "error",
+    "@emotion/import-from-emotion": "error",
+    "@emotion/styled-import": "error"
   }
 }
