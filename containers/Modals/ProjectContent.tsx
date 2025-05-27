@@ -18,10 +18,12 @@ function ProjectContent({ content }: ModalContentTypes) {
           <dt>소개</dt>
           <dd>{info.introduce}</dd>
         </div>
-        <div>
-          <dt>진행기간</dt>
-          <dd>{info.durationOfWork}</dd>
-        </div>
+        {info.durationOfWork && (
+          <div>
+            <dt>진행기간</dt>
+            <dd>{info.durationOfWork}</dd>
+          </div>
+        )}
         <div>
           <dt>사용 기술</dt>
           <dd className="skills">
@@ -33,12 +35,20 @@ function ProjectContent({ content }: ModalContentTypes) {
         <div>
           <dt>바로가기</dt>
           <dd>
-            {info.link.github && <Link href={info.link.github}>깃허브</Link>}
+            {info.link.github && (
+              <Link href={info.link.github} target="_blank">
+                깃허브
+              </Link>
+            )}
             {info.link.presentation && (
-              <Link href={info.link.presentation}>발표자료</Link>
+              <Link href={info.link.presentation} target="_blank">
+                발표자료
+              </Link>
             )}
             {info.link.buildSite && (
-              <Link href={info.link.buildSite}>배포사이트</Link>
+              <Link href={info.link.buildSite} target="_blank">
+                배포사이트
+              </Link>
             )}
           </dd>
         </div>

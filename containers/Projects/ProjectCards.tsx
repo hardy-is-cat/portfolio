@@ -4,6 +4,7 @@ import carZip from "public/images/logo-carzip.png";
 import taing from "public/images/logo-taing.png";
 import movieDog from "public/images/logo-moviedog.png";
 import jojiju from "public/images/logo-jojiju.png";
+import goyeongDiary from "public/images/logo-goyeong-diary.png";
 import Card from "@/components/Card";
 import ProjectContent from "containers/Modals/ProjectContent";
 import { projectModalContent } from "pages/api/data";
@@ -11,6 +12,9 @@ import { projectModalContent } from "pages/api/data";
 function ProjectCards() {
   return (
     <CardList>
+      <Card imgSrc={goyeongDiary.src} title="goyeong diary" BGcolor="#AD58E1">
+        <ProjectContent content={projectModalContent["goyeong-diary"]} />
+      </Card>
       <Card
         imgSrc={jojiju.src}
         title="jojiju"
