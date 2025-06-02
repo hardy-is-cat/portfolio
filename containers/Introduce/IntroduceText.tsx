@@ -1,6 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState, introduceTitleState } from "stores/atom";
-import styled, { css } from "styled-components";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 import { introduceTextDev, introduceTextNormal } from "pages/api/data";
 
 function IntroduceText() {
@@ -95,7 +96,7 @@ const TextWrapper = styled.div<{ $appearIntroduce: boolean }>`
       }
     `}
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     h3 {
       font-size: ${({ theme }) => theme.fontSize.headline4};
     }

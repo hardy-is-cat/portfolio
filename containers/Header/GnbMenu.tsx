@@ -1,6 +1,6 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { darkModeState, gnbState } from "stores/atom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import scrollToHash from "utils/scrollToHash";
 
 function GnbMenu() {
@@ -73,7 +73,7 @@ const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
   transition: right 0.4s;
   z-index: 101;
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     width: 80%;
     right: ${({ $isGnbOpened }) => ($isGnbOpened ? "0" : "-80%")};
   }
@@ -89,7 +89,7 @@ const GnbMenuWrapper = styled.nav<{ $isGnbOpened: boolean }>`
     transition: all 0.1s;
     cursor: pointer;
 
-    ${({ theme }) => theme.media.tablet} {
+    ${({ theme }) => theme.mediaQuery.tablet} {
       font-size: ${({ theme }) => theme.fontSize.headline3};
     }
 

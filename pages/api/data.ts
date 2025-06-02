@@ -119,7 +119,7 @@ export type ProjectContentTypes = {
   title: string;
   info: {
     introduce: string;
-    durationOfWork: string;
+    durationOfWork?: string;
     skills: string[];
     link: {
       github?: string;
@@ -139,11 +139,45 @@ type ProjectModalTypes = {
 };
 
 export const projectModalContent: ProjectModalTypes = {
+  "goyeong-diary": {
+    title: "Next.js 개인 프로젝트 - 고영일기",
+    info: {
+      introduce: "나의 고양이의 하루를 기록하고 확인할 수 있는 서비스",
+      skills: ["TypeScript", "Next.js", "Emotion", "Firebase", "Recoil"],
+      link: {
+        github: "https://github.com/hardy-is-cat/goyeong-diary",
+        buildSite: "https://goyeong-diary.vercel.app/",
+      },
+    },
+    screenshot: [
+      "/images/screenshot/screenshot-goyeong-01.jpg",
+      "/images/screenshot/screenshot-goyeong-02.jpg",
+      "/images/screenshot/screenshot-goyeong-03.jpg",
+      "/images/screenshot/screenshot-goyeong-04.jpg",
+    ],
+    description: [
+      { title: "피그마 UI 디자인 시안 제작" },
+      {
+        title: "회원가입, 로그인",
+        detail: [
+          "Firebase를 이용해 이메일을 기반으로 한 회원가입 및 로그인 기능 구현.",
+        ],
+      },
+      {
+        title: "Firebase Database를 이용한 각종 기록 저장",
+        detail: [
+          "고양이의 이름, 생년월일, 사진을 등록 및 수정",
+          "무료 이미지 호스팅 서비스인 ImgBB의 API를 이용해 사진을 업로드하고, 이미지 주소를 별도로 저장",
+          "화장실, 식사, 놀이, 접종 기록을 Firebase Database에 저장 후 Table 형식으로 불러옴.",
+        ],
+      },
+    ],
+  },
   jojiju: {
     title: "Next.js 팀프로젝트 - 조지주(PickYourPotion)",
     info: {
       introduce:
-        "調(고를 조), 持(가질 지), 酒(술 주). 간단한 문답을 통해 나에게 맞는 전통주를 추천받고 이를 구매할 수 있는 이커머스 웹사이트입니다.",
+        "調(고를 조), 持(가질 지), 酒(술 주). 간단한 문답을 통해 나에게 맞는 전통주를 추천받고 이를 구매할 수 있는 이커머스 웹사이트",
       durationOfWork: "2024.07.29 ~ 2024.08.27",
       skills: ["TypeScript", "Next.js", "TailwindCSS", "Zustand", "Swiper.js"],
       link: {

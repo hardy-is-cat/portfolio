@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Gallery from "@/components/Gallery";
 import { ProjectContentTypes } from "pages/api/data";
 
@@ -18,10 +18,12 @@ function ProjectContent({ content }: ModalContentTypes) {
           <dt>소개</dt>
           <dd>{info.introduce}</dd>
         </div>
-        <div>
-          <dt>진행기간</dt>
-          <dd>{info.durationOfWork}</dd>
-        </div>
+        {info.durationOfWork && (
+          <div>
+            <dt>진행기간</dt>
+            <dd>{info.durationOfWork}</dd>
+          </div>
+        )}
         <div>
           <dt>사용 기술</dt>
           <dd className="skills">
@@ -33,12 +35,20 @@ function ProjectContent({ content }: ModalContentTypes) {
         <div>
           <dt>바로가기</dt>
           <dd>
-            {info.link.github && <Link href={info.link.github}>깃허브</Link>}
+            {info.link.github && (
+              <Link href={info.link.github} target="_blank">
+                깃허브
+              </Link>
+            )}
             {info.link.presentation && (
-              <Link href={info.link.presentation}>발표자료</Link>
+              <Link href={info.link.presentation} target="_blank">
+                발표자료
+              </Link>
             )}
             {info.link.buildSite && (
-              <Link href={info.link.buildSite}>배포사이트</Link>
+              <Link href={info.link.buildSite} target="_blank">
+                배포사이트
+              </Link>
             )}
           </dd>
         </div>
@@ -82,7 +92,7 @@ const H3Block = styled.h3`
 const DlBlock = styled.dl`
   margin: 40px 0;
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     margin: 12px 0;
   }
 
@@ -91,7 +101,7 @@ const DlBlock = styled.dl`
     display: flex;
     flex-flow: row;
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       flex-flow: column;
     }
   }
@@ -101,7 +111,7 @@ const DlBlock = styled.dl`
     display: inline-block;
     line-height: 1.3;
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       margin-top: 4px;
       margin-bottom: 4px;
     }
@@ -150,7 +160,7 @@ const WorkListBlock = styled.ul`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       margin-left: 0;
     }
   }

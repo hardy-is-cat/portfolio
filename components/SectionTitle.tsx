@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 type SectionTitleProps = {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ const SectionTitleBlock = styled.h2`
   text-align: center;
   margin-bottom: 100px;
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     font-size: ${({ theme }) => theme.fontSize.headline1};
     margin-bottom: 40px;
   }

@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { useRecoilState } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
 
 function ViewModeBtn() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeState);
@@ -72,28 +72,18 @@ const RadioBlock = styled.div<{ $isDarkMode: boolean }>`
 
   label[for="개발자"] {
     border-radius: 8px 0 0 8px;
-    background-color: transparent;
-    color: ${({ theme }) => theme.colors.text};
-
-    ${({ $isDarkMode }) =>
-      $isDarkMode &&
-      css`
-        background-color: ${({ theme }) => theme.colors.primary};
-        color: ${({ theme }) => theme.colors.bg};
-      `}
+    background-color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.primary : "transparent"};
+    color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.bg : theme.colors.text};
   }
 
   label[for="일반인"] {
     border-radius: 0 8px 8px 0;
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.bg};
+    background-color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? "transparent" : theme.colors.primary};
+    color: ${({ $isDarkMode, theme }) =>
+      $isDarkMode ? theme.colors.text : theme.colors.bg};
     border-left: none;
-
-    ${({ $isDarkMode }) =>
-      $isDarkMode &&
-      css`
-        background-color: transparent;
-        color: ${({ theme }) => theme.colors.text};
-      `}
   }
 `;

@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { Theme } from "@emotion/react";
 
 const lightColors = {
   bg: "#fefefe",
@@ -29,7 +29,7 @@ const fontSize = {
   headline3: "1.25rem",
   headline4: "1.125rem",
   headline5: "1rem",
-  discription: "1rem",
+  description: "1rem",
   helperText: "0.875rem",
 };
 
@@ -37,7 +37,7 @@ const customMediaQuery = (maxWidth: number): string => {
   return `@media (max-width: ${maxWidth}px)`;
 };
 
-const media = {
+const mediaQuery = {
   custom: customMediaQuery,
   desktop: customMediaQuery(1200),
   tablet: customMediaQuery(768),
@@ -62,21 +62,21 @@ export type LightColorTypes = typeof lightColors;
 export type DarkColorTypes = typeof darkColors;
 export type CommonColorTypes = typeof commonColors;
 export type FontSizeTypes = typeof fontSize;
-export type MediaQueryTypes = typeof media;
+export type MediaQueryTypes = typeof mediaQuery;
 export type FlexWidthTypes = typeof flexWidth;
 
-export const darkTheme: DefaultTheme = {
+export const darkTheme: Theme = {
   colors: darkColors,
   commonColors,
-  media,
+  mediaQuery,
   fontSize,
   flexWidth,
 };
 
-export const lightTheme: DefaultTheme = {
+export const lightTheme: Theme = {
   colors: lightColors,
   commonColors,
-  media,
+  mediaQuery,
   fontSize,
   flexWidth,
 };

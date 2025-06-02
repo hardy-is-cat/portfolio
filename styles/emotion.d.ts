@@ -1,4 +1,4 @@
-import "styled-components";
+import "@emotion/react";
 import {
   DarkColorTypes,
   LightColorTypes,
@@ -6,14 +6,14 @@ import {
   MediaQueryTypes,
   CommonColorTypes,
   FlexWidthTypes,
-} from "./theme";
+} from "styles/theme";
 
-declare module "styled-components" {
-  export interface DefaultTheme {
-    colors: LightColorTypes | DarkColorTypes;
+declare module "@emotion/react" {
+  export interface Theme {
+    colors: DarkColorTypes | LightColorTypes;
     commonColors: CommonColorTypes;
     fontSize: FontSizeTypes;
-    media: MediaQueryTypes;
+    mediaQuery: MediaQueryTypes;
     flexWidth: FlexWidthTypes;
   }
 }

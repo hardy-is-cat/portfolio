@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import { FaSearchPlus } from "react-icons/fa";
 
@@ -46,11 +46,11 @@ const CurrentImgWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: all 0.2s;
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     height: 200px;
   }
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     height: 260px;
   }
 
@@ -74,12 +74,12 @@ const ThumItem = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.border};
   cursor: pointer;
 
-  ${({ theme }) => theme.media.mobile} {
+  ${({ theme }) => theme.mediaQuery.mobile} {
     height: 60px;
     min-width: calc((100% - 10px * 1) / 2);
   }
 
-  ${({ theme }) => theme.media.tablet} {
+  ${({ theme }) => theme.mediaQuery.tablet} {
     height: 80px;
     min-width: calc((100% - 10px * 1) / 2);
   }

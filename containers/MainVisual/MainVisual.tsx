@@ -1,22 +1,12 @@
 import { useRecoilValue } from "recoil";
 import { darkModeState } from "stores/atom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import IconScroll from "./IconScroll";
 import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 
 function MainVisual() {
   const IsDarkMode = useRecoilValue(darkModeState);
-  // const convertString = (string: string) => {
-  //   return string.split("<br/>").map((string) => {
-  //     return (
-  //       <span key={string}>
-  //         {string}
-  //         <br />
-  //       </span>
-  //     );
-  //   });
-  // };
 
   return (
     <MainVisualWrapper id="main-visual">
@@ -25,7 +15,7 @@ function MainVisual() {
         <br />
         조정현입니다.
         <br />
-        <span>최신 업데이트 날짜_24.10.23</span>
+        <span>최신 업데이트 날짜_25.05.28</span>
       </p>
       <IconScrollBlock />
     </MainVisualWrapper>
@@ -52,7 +42,7 @@ const MainVisualWrapper = styled.section`
     font-size: 48px;
     font-weight: 700;
 
-    ${({ theme }) => theme.media.tablet} {
+    ${({ theme }) => theme.mediaQuery.tablet} {
       font-size: 32px;
     }
 

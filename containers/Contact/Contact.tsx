@@ -3,7 +3,7 @@ import useScrollFadeIn from "utils/hooks/useScrollFadeIn";
 import IconEmail from "public/images/icon-email.svg";
 import IconCall from "public/images/icon-call.svg";
 import IconGithub from "public/images/icon-github.svg";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Link from "next/link";
 
 function Contact() {
@@ -54,7 +54,7 @@ const ContactWrapper = styled.div`
       text-align: center;
     }
 
-    ${({ theme }) => theme.media.mobile} {
+    ${({ theme }) => theme.mediaQuery.mobile} {
       gap: 4px;
 
       svg {

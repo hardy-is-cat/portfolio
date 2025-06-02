@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
 import { gnbState } from "stores/atom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 function GnbBtn() {
   const [isGnbOpened, setIsGnbOpened] = useRecoilState(gnbState);
