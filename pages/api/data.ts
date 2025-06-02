@@ -51,7 +51,7 @@ export const skillsNormal = [
   {
     title: "계획형 인간",
     content:
-      "계획을 짜고 그 계획대로 움직이는 것을 좋아합니다. 여행이라도 간다면 분 단위 일정표 작성은 필수!",
+      "계획을 짜고 그 계획대로 움직이는 것을 좋아합니다. 여행갈 땐 분단위 계획표를 짜두어야 안심하는 편입니다.",
   },
   {
     title: "집순이",
@@ -61,7 +61,7 @@ export const skillsNormal = [
   {
     title: "금손",
     content:
-      "어떤 요리도 척척. 그 중 자신 있는건 일식, 한식. 맛있는 음식이 있다면 직접 해먹어봐야 직성이 풀리는 성격입니다.",
+      "직접 요리해 먹는 것을 좋아합니다. 일식, 한식을 좋아하며 궁금한 요리는 직접 해봐야 직성이 풀리는 성격입니다.",
   },
 ];
 
@@ -143,7 +143,13 @@ export const projectModalContent: ProjectModalTypes = {
     title: "Next.js 개인 프로젝트 - 고영일기",
     info: {
       introduce: "나의 고양이의 하루를 기록하고 확인할 수 있는 서비스",
-      skills: ["TypeScript", "Next.js", "Emotion", "Firebase", "Recoil"],
+      skills: [
+        "TypeScript",
+        "Next.js",
+        "Styled-Components",
+        "Firebase",
+        "Recoil",
+      ],
       link: {
         github: "https://github.com/hardy-is-cat/goyeong-diary",
         buildSite: "https://goyeong-diary.vercel.app/",
@@ -371,7 +377,7 @@ export const galleryModalContent: GalleryModalTypes = {
       "/images/gallery/pic-food8.jpeg",
     ],
     description:
-      "참치 초밥, 일본식 닭튀김, 시메사바 등등 주로 일식 위주의 요리를 자주 합니다. 스트레스 해소 방법이기도 하고요. 먹는 게 제일 좋아요.",
+      "스트레스 해소의 한 방식으로 요리하는 것을 좋아합니다. 먹는 게 제일 좋아요.",
   },
   hardy: {
     title: "최고의 고양이 하디",
@@ -387,18 +393,18 @@ export const galleryModalContent: GalleryModalTypes = {
       "/images/gallery/pic-hardy9.jpeg",
     ],
     description:
-      "세상에서 제일 귀여운 고양이!!!!!! 올해 6살이고 매일 미모 갱신 중입니다. 매주 메일링 서비스 가능합니다.",
+      "세상에서 제일 귀여운 고양이라고 생각하는 하디입니다. 하디를 한 번 본 사람은 절대 잊지 못한다는 전설이...",
   },
   zual: {
-    title: "조정현은 zual입니다",
+    title: "ZUAL의 유래",
     picture: [
       "/images/gallery/pic-zual1.jpeg",
       "/images/gallery/pic-zual2.jpeg",
       "/images/gallery/pic-zual3.jpeg",
       "/images/gallery/pic-zual4.jpeg",
     ],
-    description: `타이틀인 ZUAL은 어렸을 때부터 사용한 별명입니다. 고등학교 때 멍 때리는 모습을 보고 친구가 침 좔좔 흘릴 것 같다고 해서 붙여진 별명인데, 마음에 들어서 계속 쓰고 있습니다.<br/>
-      사진 찍는 걸 좋아하고 필름 카메라도 좋아합니다. 필름값이 너무 비싸져 이제는 못하지만...집에서 음악 듣고 게임하는 것도 좋아합니다.<br/>
-      인생 게임은 몬스터헌터 시리즈이고 25년에 신작이 나옵니다. 같이 하실 분은 연락 주세요...🥺`,
+    description: `타이틀인 ZUAL은 어렸을 때부터 사용한 별명입니다. 고등학교 때 멍 때리는 모습을 보고 친구가 침 좔좔 흘릴 것 같다고 해서 붙여준 별명인데, 마음에 들어서 계속 쓰고 있습니다.<br/>
+      필름 카메라와 사진 찍는 걸 좋아합니다. 집에서 음악 듣고 게임하는 것도 좋아합니다.<br/>
+      제일 좋아하는 게임은 몬스터헌터입니다. 해머가 필요하신 분은 연락 주세요...🥺`,
   },
 };
