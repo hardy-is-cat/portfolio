@@ -126,6 +126,7 @@ export type ProjectContentTypes = {
       buildSite?: string;
       presentation?: string;
     };
+    contribution: string;
   };
   screenshot: string[];
   description: {
@@ -140,7 +141,7 @@ type ProjectModalTypes = {
 
 export const projectModalContent: ProjectModalTypes = {
   "goyeong-diary": {
-    title: "Next.js 개인 프로젝트 - 고영일기",
+    title: "Next.js 개인 토이프로젝트 - 고영일기",
     info: {
       introduce: "나의 고양이의 하루를 기록하고 확인할 수 있는 서비스",
       skills: [
@@ -154,6 +155,7 @@ export const projectModalContent: ProjectModalTypes = {
         github: "https://github.com/hardy-is-cat/goyeong-diary",
         buildSite: "https://goyeong-diary.vercel.app/",
       },
+      contribution: "100%",
     },
     screenshot: [
       "/images/screenshot/screenshot-goyeong-01.jpg",
@@ -180,7 +182,7 @@ export const projectModalContent: ProjectModalTypes = {
     ],
   },
   jojiju: {
-    title: "Next.js 팀프로젝트 - 조지주(PickYourPotion)",
+    title: "Next.js 4인 팀프로젝트 - 조지주(PickYourPotion)",
     info: {
       introduce:
         "調(고를 조), 持(가질 지), 酒(술 주). 간단한 문답을 통해 나에게 맞는 전통주를 추천받고 이를 구매할 수 있는 이커머스 웹사이트",
@@ -190,6 +192,7 @@ export const projectModalContent: ProjectModalTypes = {
         github: "https://github.com/hardy-is-cat/PickYourPotion",
         buildSite: "https://www.pickyourpotion.store",
       },
+      contribution: "25%",
     },
     screenshot: [
       "/images/screenshot/screenshot-jojiju-01.png",
@@ -226,11 +229,12 @@ export const projectModalContent: ProjectModalTypes = {
     ],
   },
   movieDog: {
-    title: "Next.js 사이드팀프로젝트 - 무비독(moviedog)",
+    title: "Next.js 2인 토이프로젝트 - 무비독(MovieDog)",
     info: {
       introduce:
         "TMDB 영화정보 api를 이용한 영화정보 조회 및 리뷰 작성 서비스(반응형)",
-      durationOfWork: "2023.09.05 ~ 2023.11.25",
+      durationOfWork:
+        "2023.09.05 ~ 2023.11.25(1차 개발) / 25.05.31 - 25.06.24(리팩토링 및 기능 개선)",
       skills: [
         "TypeScript",
         "Next.js",
@@ -239,9 +243,10 @@ export const projectModalContent: ProjectModalTypes = {
         "Swiper.js",
       ],
       link: {
-        github: "https://github.com/movie-dog/movie-dog",
-        buildSite: "https://main.drpe221ejddia.amplifyapp.com/",
+        github: "https://github.com/hardy-is-cat/movie-dog",
+        buildSite: "https://movie-dog-pi.vercel.app/",
       },
+      contribution: "70%",
     },
     screenshot: [
       "/images/screenshot/screenshot-moviedog-01.png",
@@ -250,6 +255,15 @@ export const projectModalContent: ProjectModalTypes = {
       "/images/screenshot/screenshot-moviedog-04.png",
     ],
     description: [
+      {
+        title: "리팩토링",
+        detail: [
+          "기존 클라이언트 사이드에서 API요청 하던 것을 getServerSideProps를 이용하여 서버 사이드에서 요청하도록 수정",
+          "장르별, 년도별 영화 리스트 페이지 및 검색 결과 페이지 UI 수정 및 로직 개선",
+          "이미지 최적화",
+          "Light House 검사시 기존 45점에서 70점으로 성능 개선",
+        ],
+      },
       { title: "와이어 프레임 작성, 피그마 시안 작업" },
       {
         title: "메인페이지",
@@ -259,10 +273,10 @@ export const projectModalContent: ProjectModalTypes = {
         ],
       },
       {
-        title: "장르별 영화 카테고리 페이지",
+        title: "장르별, 년도별 영화 카테고리 페이지",
         detail: [
-          "장르별로 나뉘어진 영화를 볼 수 있도록 카테고리 형식으로 나눔",
-          "페이지네이션 컴포넌트 제작",
+          "장르별 혹은 년도별로 나뉘어진 영화를 볼 수 있도록 카테고리 형식으로 나눔",
+          "API 응답으로 받은 전체 페이지 수를 기반으로 페이지네이션 컴포넌트 제작",
         ],
       },
       {
@@ -283,7 +297,7 @@ export const projectModalContent: ProjectModalTypes = {
     ],
   },
   carZip: {
-    title: "리액트 팀프로젝트 - 카집(CarZip)",
+    title: "리액트 4인 팀프로젝트 - 카집(CarZip)",
     info: {
       introduce: "공공데이터와 카카오맵API를 이용한 주차장 정보 공유 서비스",
       durationOfWork: "2023.03.09 ~ 2023.03.28",
@@ -293,6 +307,7 @@ export const projectModalContent: ProjectModalTypes = {
         presentation:
           "https://docs.google.com/presentation/d/10ZIoQ7_o5HqIxnhy2IyQqxFqRTypoNFluwr22lURGCE/edit#slide=id.g1f9f45324dc_0_109",
       },
+      contribution: "20%",
     },
     screenshot: [
       "/images/screenshot/screenshot-carzip-01.jpg",
@@ -320,7 +335,7 @@ export const projectModalContent: ProjectModalTypes = {
     ],
   },
   taing: {
-    title: "바닐라JS 팀프로젝트 - 타잉(TAING)",
+    title: "바닐라JS 4인 팀프로젝트 - 타잉(TAING)",
     info: {
       introduce:
         "국내 OTT 서비스인 티빙의 UI를 참고하여 제작한 반응형 웹사이트",
@@ -331,6 +346,7 @@ export const projectModalContent: ProjectModalTypes = {
         presentation:
           "https://www.canva.com/design/DAFZ-NRdK0s/8ydvSRLYPgARcu7E7lQRsw/view?analyticsCorrelationId=ba6c2384-97dd-4673-a52d-392218bc957c",
       },
+      contribution: "30%",
     },
     screenshot: [
       "/images/screenshot/screenshot-taing-01.png",

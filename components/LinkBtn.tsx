@@ -2,13 +2,17 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
 
-type LinkTypes = {
+interface LinkTypes extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
   href: string;
-};
+}
 
-function LinkBtn({ children, href }: LinkTypes) {
-  return <LinkBtnBlock href={href}>{children}</LinkBtnBlock>;
+function LinkBtn({ children, href, ...props }: LinkTypes) {
+  return (
+    <LinkBtnBlock href={href} {...props}>
+      {children}
+    </LinkBtnBlock>
+  );
 }
 
 export default LinkBtn;
