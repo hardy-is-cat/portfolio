@@ -12,8 +12,8 @@ export default function Layout({ children }: React.PropsWithChildren) {
   const [isDarkMode, setIsDarkMode] = useRecoilState(darkModeState);
 
   useEffect(() => {
-    if (localStorage.getItem("darkMode") !== undefined) {
-      setIsDarkMode(!!Number(localStorage.getItem("darkMode")));
+    if (localStorage.getItem("darkMode") === "0") {
+      setIsDarkMode(false);
     }
   });
 

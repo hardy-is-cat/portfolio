@@ -15,7 +15,7 @@ function MainVisual() {
         <br />
         조정현입니다.
         <br />
-        <span>최신 업데이트 날짜_25.05.28</span>
+        <span>최신 업데이트 날짜_25.06.28</span>
       </p>
       <IconScrollBlock />
     </MainVisualWrapper>

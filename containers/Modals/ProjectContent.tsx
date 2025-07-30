@@ -52,6 +52,10 @@ function ProjectContent({ content }: ModalContentTypes) {
             )}
           </dd>
         </div>
+        <div>
+          <dt>기여도</dt>
+          <dd>{info.contribution}</dd>
+        </div>
       </DlBlock>
       <HrBlock />
       <Gallery imgData={screenshot} />

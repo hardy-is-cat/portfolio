@@ -54,7 +54,10 @@ function Introduce() {
             style={{ objectFit: "cover" }}
           />
           {IsDarkMode ? (
-            <LinkBtn href="https://zualdy.notion.site/9797e03011ad4848b2ab98fa3c5476e3?pvs=4">
+            <LinkBtn
+              href="https://zualdy.notion.site/940aad540e2246d2bb2b9805b0f9858f?source=copy_link"
+              target="_blank"
+            >
               노션 이력서 보기
             </LinkBtn>
           ) : (
