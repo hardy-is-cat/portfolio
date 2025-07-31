@@ -17,6 +17,6 @@
 - ESLint : 8
 - ESLint-Config-Prettier : 9.0.0
 
-[포트폴리오 보기](https://zual-portfolio.netlify.app/)
+[포트폴리오 보기](https://zual-portfolio.vercel.app/)
 
 ![포트폴리오 첫화면](https://github.com/movie-dog/movie-dog/assets/76080643/96643ee1-6794-4073-88a0-09e66bf9e31d)
