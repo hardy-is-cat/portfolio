@@ -24,6 +24,7 @@ const SectionTitleBlock = styled.h2`
   color: ${({ theme }) => theme.colors.text};
   text-align: center;
   margin-bottom: 100px;
+  padding: 0 20px;
 
   ${({ theme }) => theme.mediaQuery.mobile} {
     font-size: ${({ theme }) => theme.fontSize.headline1};

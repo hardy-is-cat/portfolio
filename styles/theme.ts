@@ -1,8 +1,8 @@
 import { Theme } from "@emotion/react";
 
 const lightColors = {
-  bg: "#fefefe",
-  gnb: "#fff",
+  bg: "#fcfcfc",
+  gnb: "#fdfdfd",
   text: "#2D373B",
   primary: "#F5467A",
   border: "#c4c4c4",
@@ -41,7 +41,7 @@ const mediaQuery = {
   custom: customMediaQuery,
   desktop: customMediaQuery(1200),
   tablet: customMediaQuery(768),
-  mobile: customMediaQuery(360),
+  mobile: customMediaQuery(390),
 };
 
 const customFlexWidth = (maxWidth: number): string => {
