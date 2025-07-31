@@ -1,8 +1,8 @@
 import { Theme } from "@emotion/react";
 
 const lightColors = {
-  bg: "#fefefe",
-  gnb: "#fff",
+  bg: "#fcfcfc",
+  gnb: "#fdfdfd",
   text: "#2D373B",
   primary: "#F5467A",
   border: "#c4c4c4",

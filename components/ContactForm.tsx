@@ -169,6 +169,7 @@ const InputWrap = styled.div`
     border-radius: 8px;
     border: 1px solid ${({ theme }) => theme.colors.border};
     font-size: ${({ theme }) => theme.fontSize.description};
+    background-color: ${({ theme }) => theme.colors.bg};
   }
 `;
 
