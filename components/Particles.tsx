@@ -2,8 +2,6 @@
 
 import styled from "@emotion/styled";
 import { useCallback, useEffect, useRef } from "react";
-import { useRecoilValue } from "recoil";
-import { darkModeState } from "stores/atom";
 
 /**
  * @param x 입자의 x좌표
@@ -32,7 +30,7 @@ interface ParticlesType {
 }
 
 function Particles({ circleCount = 100, circleRadius = 2 }: ParticlesType) {
-  const IsDarkMode = useRecoilValue(darkModeState);
+  // const isDarkMode = useRecoilValue(darkModeState);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const canvasSize = useRef<{ width: number; height: number }>({
@@ -134,7 +132,7 @@ function Particles({ circleCount = 100, circleRadius = 2 }: ParticlesType) {
       ctx.beginPath();
       ctx.globalAlpha = circle.opacity;
       ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-      ctx.fillStyle = IsDarkMode ? "#eee" : "#555";
+      ctx.fillStyle = "#999";
       ctx.fill();
     });
 
