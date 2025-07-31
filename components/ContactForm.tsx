@@ -168,6 +168,7 @@ const InputWrap = styled.div`
     margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid ${({ theme }) => theme.colors.border};
+    color: ${({ theme }) => theme.colors.text};
     font-size: ${({ theme }) => theme.fontSize.description};
     background-color: ${({ theme }) => theme.colors.bg};
   }
