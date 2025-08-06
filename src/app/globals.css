@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fcfcfc;
+  --foreground: #2d373b;
+  --gnb-background: #fdfdfd;
+  --primary: #f5467a;
+}
+
+.dark {
+  --background: #253034;
+  --foreground: #f6f6f6;
+  --gnb-background: #2d373b;
+  --primary: #acea6e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gnb-background: var(--gnb-background);
+  --color-primary: var(--primary);
+  --color-black: #222;
+  --color-gray: #555;
+  --color-white: #efefef;
+  --text-xlText: "3rem";
+  --text-headline1: "2.25rem";
+  --text-headline2: "1.5rem";
+  --text-headline3: "1.25rem";
+  --text-headline4: "1.125rem";
+  --text-headline5: "1rem";
+  --text-description: "1rem";
+  --text-helperText: "0.875rem";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "pretendard";
+  src: url("/fonts/PretendardVariable.ttf") format("ttf");
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+input,
+button,
+textarea {
+  font-family: "Montserrat", "pretendard", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 360px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
