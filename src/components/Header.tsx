@@ -1,11 +1,38 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import GNB from "./GNB";
 import InitTheme from "./InitTheme";
 import ToggleThemeBtn from "./ToggleThemeBtn";
+import { useMotionValueEvent, useScroll } from "motion/react";
 
 function Header() {
+  const [isScroll, setIsScroll] = useState(false);
+  const { scrollY } = useScroll();
+
+  const handleScroll = (scrollYOffset: number) => {
+    if (scrollYOffset > 100) {
+      setIsScroll(true);
+    } else if (scrollYOffset <= 100) {
+      setIsScroll(false);
+    }
+  };
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    handleScroll(latest);
+  });
+
+  useEffect(() => {
+    handleScroll(window.scrollY);
+  }, []);
+
   return (
-    <header className="fixed h-24 bg-gnb-background p-5 flex justify-between items-center w-screen border-b border-b-gray-200 dark:border-b-0">
-      <h1 className="text-2xl tracking-[0.4em]">
+    <header
+      className={`bg-gnb-background ${isScroll ? "h-20 p-4" : "h-24 p-5"} transition-custom fixed flex w-full items-center justify-between border-b border-b-gray-200 dark:border-b-0`}
+    >
+      <h1
+        className={`${isScroll ? "text-xl" : "text-2xl"} transition-custom tracking-[0.4em]`}
+      >
         <a href="#main-visual">
           ZU
           <br />
@@ -13,9 +40,9 @@ function Header() {
         </a>
       </h1>
       <InitTheme>
-        <ToggleThemeBtn />
+        <ToggleThemeBtn isScroll={isScroll} />
       </InitTheme>
-      <GNB />
+      <GNB isScroll={isScroll} />
     </header>
   );
 }

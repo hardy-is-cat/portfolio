@@ -6,7 +6,7 @@ import { MouseEvent, useCallback } from "react";
 
 const darkModeAtom = atomWithStorage("darkMode", "dark");
 
-function ToggleThemeBtn() {
+function ToggleThemeBtn({ isScroll }: { isScroll: boolean }) {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom);
 
   const toggleTheme = useCallback((e: MouseEvent<HTMLButtonElement>) => {
@@ -25,14 +25,14 @@ function ToggleThemeBtn() {
     <div className="flex">
       <button
         type="button"
-        className="py-2 px-5 rounded-lg rounded-r-none dark:text-background dark:bg-primary dark:border-none font-bold cursor-pointer bg-background text-foreground border border-gray-300 border-r-0"
+        className={`${isScroll ? "px-4 text-sm" : "text-md px-5"} dark:text-background dark:bg-primary bg-background text-foreground transition-custom cursor-pointer rounded-lg rounded-r-none border border-r-0 border-gray-300 py-2 font-bold dark:border-none`}
         onClick={toggleTheme}
       >
         개발자
       </button>
       <button
         type="button"
-        className="py-2 px-5 rounded-lg rounded-l-none bg-primary text-background dark:text-foreground dark:bg-transparent font-bold dark:border dark:border-white dark:border-l-0 cursor-pointer"
+        className={`${isScroll ? "px-4 text-sm" : "text-md px-5"} bg-primary text-background dark:text-foreground transition-custom cursor-pointer rounded-lg rounded-l-none py-2 font-bold dark:border dark:border-l-0 dark:border-white dark:bg-transparent`}
         onClick={toggleTheme}
       >
         일반인

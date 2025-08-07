@@ -3,43 +3,43 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 
-function GNB() {
+function GNB({ isScroll }: { isScroll: boolean }) {
   const [isOpened, setIsOpend] = useState(false);
 
   return (
-    <div className="relative size-[50px]">
+    <div className="relative size-12">
       <button
         type="button"
-        className="fixed z-50 size-12 flex flex-col items-start justify-center gap-2 px-3 border border-foreground rounded-sm cursor-pointer"
+        className={`${isScroll ? "size-11 px-2.5" : "size-12 px-3"} border-foreground transition-custom fixed z-50 flex cursor-pointer flex-col items-start justify-center gap-2 rounded-sm border`}
         aria-label="메뉴 열기"
         onClick={() => setIsOpend(!isOpened)}
       >
         <span
           className={`block ${
-            isOpened ? "w-[130%] rotate-45" : "w-[100%]"
-          } h-0.5 rounded-full bg-foreground transform origin-left transition-all`}
+            isOpened ? "w-[125%] rotate-45" : "w-[100%]"
+          } bg-foreground transition-custom h-0.5 origin-left transform rounded-full`}
         />
         <span
           className={`block ${
             isOpened ? "w-0" : "w-[100%]"
-          } h-0.5 rounded-full bg-foreground transform origin-left transition-all`}
+          } bg-foreground transition-custom h-0.5 origin-left transform rounded-full`}
         />
         <span
           className={`block ${
-            isOpened ? "w-[130%] -rotate-45" : "w-[100%]"
-          } h-0.5 rounded-full bg-foreground transform origin-left transition-all`}
+            isOpened ? "w-[125%] -rotate-45" : "w-[100%]"
+          } bg-foreground transition-custom h-0.5 origin-left transform rounded-full`}
         />
       </button>
       <AnimatePresence>
         {isOpened && (
           <motion.nav
-            className="fixed top-0 right-0 size-full flex justify-end items-center bg-black/40 z-49"
+            className="fixed top-0 right-0 z-49 flex size-full items-center justify-end bg-black/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.ul
-              className="size-full px-16 py-24 text-center lg:w-sm lg:text-left bg-gnb-background text-2xl font-light"
+              className="bg-gnb-background size-full px-16 py-24 text-center text-2xl font-light lg:w-sm lg:text-left"
               initial={{ x: 200, opacity: 0.5 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 200, opacity: 0.5 }}
