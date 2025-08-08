@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GNB from "./GNB";
-import InitTheme from "./InitTheme";
-import ToggleThemeBtn from "./ToggleThemeBtn";
+import GNB from "../GNB";
+import InitTheme from "../InitTheme";
+import ToggleThemeBtn from "../ToggleThemeBtn";
 import { useMotionValueEvent, useScroll } from "motion/react";
 
 function Header() {
@@ -39,9 +39,9 @@ function Header() {
           AL
         </a>
       </h1>
-      <InitTheme>
-        <ToggleThemeBtn isScroll={isScroll} />
-      </InitTheme>
+      <ToggleThemeBtn isScroll={isScroll} />
+      {/* <InitTheme>
+      </InitTheme> */}
       <GNB isScroll={isScroll} />
     </header>
   );
