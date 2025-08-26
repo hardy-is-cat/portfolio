@@ -24,14 +24,14 @@
   --color-black: #222;
   --color-gray: #555;
   --color-white: #efefef;
-  --text-xlText: "3rem";
-  --text-headline1: "2.25rem";
-  --text-headline2: "1.5rem";
-  --text-headline3: "1.25rem";
-  --text-headline4: "1.125rem";
-  --text-headline5: "1rem";
-  --text-description: "1rem";
-  --text-helperText: "0.875rem";
+  --text-xlText: 3rem;
+  --text-headline1: 2.25rem;
+  --text-headline2: 1.5rem;
+  --text-headline3: 1.25rem;
+  --text-headline4: 1.125rem;
+  --text-headline5: 1rem;
+  --text-description: 1rem;
+  --text-helperText: 0.875rem;
 }
 
 @font-face {

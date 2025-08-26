@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <header
-      className={`bg-gnb-background ${isScroll ? "h-20 p-4" : "h-24 p-5"} transition-custom fixed flex w-full items-center justify-between border-b border-b-gray-200 dark:border-b-0`}
+      className={`bg-gnb-background ${isScroll ? "h-20 p-4" : "h-24 p-5"} transition-custom fixed top-0 z-30 flex w-full items-center justify-between border-b border-b-gray-200 dark:border-b-0`}
     >
       <h1
         className={`${isScroll ? "text-xl" : "text-2xl"} transition-custom tracking-[0.4em]`}

@@ -42,17 +42,21 @@ function Particles({ circleCount = 100, circleRadius = 2 }: ParticlesType) {
   const darkModeValue = useAtomValue(darkModeAtom);
   const darkModeRef = useRef(darkModeValue);
 
+  const MARGIN_TOP = 100;
+
   const resizeCanvas = () => {
     const currentDpr = dprRef.current;
 
     if (canvasRef.current && contextRef.current) {
       canvasSize.current.width = document.documentElement.clientWidth;
-      canvasSize.current.height = document.documentElement.clientHeight;
+      canvasSize.current.height =
+        document.documentElement.clientHeight - MARGIN_TOP / 2;
 
       canvasRef.current.width = canvasSize.current.width * currentDpr;
-      canvasRef.current.height = canvasSize.current.height * currentDpr;
+      canvasRef.current.height =
+        canvasSize.current.height * currentDpr - MARGIN_TOP / 2;
       canvasRef.current.style.width = `${canvasSize.current.width}px`;
-      canvasRef.current.style.height = `${canvasSize.current.height}px`;
+      canvasRef.current.style.height = `${canvasSize.current.height - MARGIN_TOP / 2}px`;
 
       contextRef.current.setTransform(1, 0, 0, 1, 0, 0); // 기존 scale 제거
       contextRef.current.scale(currentDpr, currentDpr);
@@ -165,7 +169,12 @@ function Particles({ circleCount = 100, circleRadius = 2 }: ParticlesType) {
     darkModeRef.current = darkModeValue;
   }, [darkModeValue]);
 
-  return <canvas ref={canvasRef} className="bg-background size-full"></canvas>;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="bg-background absolute left-0 top-0 -z-10 h-[calc(100vh-100px)]"
+    ></canvas>
+  );
 }
 
 export default Particles;

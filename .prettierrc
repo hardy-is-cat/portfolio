@@ -3,6 +3,7 @@
   "tabWidth": 2,
   "semi": true,
   "singleQuote": false,
+  "printWidth": 80,
   "tailwindStylesheet": "./resources/css/app.css",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
