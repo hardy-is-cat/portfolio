@@ -2,7 +2,9 @@
 
 import { useAtomValue } from "jotai";
 import { motion } from "motion/react";
-import { darkModeAtom } from "@/components/utils/atoms";
+
+import { darkModeAtom } from "@/src/utils/atoms";
+
 import Particles from "../Particles";
 import RotateWord from "../RotateWord";
 import ScrollDownArrow from "../ScrollDownArrow";

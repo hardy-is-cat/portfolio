@@ -1,10 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import GNB from "../GNB";
-import InitTheme from "../InitTheme";
-import ToggleThemeBtn from "../ToggleThemeBtn";
 import { useMotionValueEvent, useScroll } from "motion/react";
+import ToggleThemeBtn from "../ToggleThemeBtn";
+import GNB from "../GNB";
 
 function Header() {
   const [isScroll, setIsScroll] = useState(false);
