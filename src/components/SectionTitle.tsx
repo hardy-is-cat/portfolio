@@ -8,6 +8,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
       initial={{ y: "100%", opacity: 0 }}
       whileInView={{ y: "0", opacity: 1 }}
       transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
       className="text-headline1 mb-20 text-center transition-all"
     >
       {children}

@@ -12,7 +12,7 @@ function Button({
   return (
     <motion.button
       type={type}
-      className={`${twMerge("hover:bg-primary hover:border-primary hover:text-background dark:border-foreground transition-custom mt-30 w-full cursor-pointer rounded-lg border py-3", className)}`}
+      className={`${twMerge("hover:bg-primary hover:border-primary hover:text-background dark:border-foreground transition-custom w-full cursor-pointer rounded-lg border py-3", className)}`}
       onClick={onClick}
     >
       {children}
