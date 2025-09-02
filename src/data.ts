@@ -157,7 +157,7 @@ export const projectContent: ProjectContentTypes[] = [
         ],
         link: {
           github: "https://github.com/hardy-is-cat/PickYourPotion",
-          buildSite: "https://www.pickyourpotion.store",
+          // buildSite: "https://www.pickyourpotion.store",
         },
         contribution: "25%",
       },

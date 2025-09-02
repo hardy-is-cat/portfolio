@@ -1,14 +1,11 @@
 "use client";
 
-import { wrap } from "motion";
-import {
-  AnimatePresence,
-  motion,
-  usePresence,
-  usePresenceData,
-} from "motion/react";
-import Image from "next/image";
 import { forwardRef, useState } from "react";
+import { wrap } from "motion";
+import { AnimatePresence, motion, usePresenceData } from "motion/react";
+import Image from "next/image";
+
+import PaginationButton from "./PaginationButton";
 
 function Slide({ items }: { items: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,13 +19,7 @@ function Slide({ items }: { items: string[] }) {
 
   return (
     <div className="h-100 border-foreground relative col-span-4 mb-5 flex items-center justify-between overflow-hidden border">
-      <button
-        className="z-11 hover:bg-foreground/70 bg-foreground/40 ml-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90"
-        onClick={() => setSlide(-1)}
-      >
-        <span className="a11y-hidden">이전</span>
-        <span className="border-background ml-1.5 block h-4 w-4 -rotate-45 border-l-2 border-t-2" />
-      </button>
+      <PaginationButton direction={-1} onClick={() => setSlide(-1)} />
       <AnimatePresence custom={direction} initial={false} mode="popLayout">
         <SlideItem
           key={items[currentIndex]}
@@ -36,13 +27,7 @@ function Slide({ items }: { items: string[] }) {
           currentIndex={currentIndex}
         />
       </AnimatePresence>
-      <button
-        className="z-11 hover:bg-foreground/70 bg-foreground/40 mr-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90"
-        onClick={() => setSlide(1)}
-      >
-        <span className="a11y-hidden">다음</span>
-        <span className="border-background mr-1.5 block h-4 w-4 rotate-45 border-r-2 border-t-2" />
-      </button>
+      <PaginationButton direction={1} onClick={() => setSlide(1)} />
     </div>
   );
 }
