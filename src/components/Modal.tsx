@@ -109,7 +109,7 @@ function Modal({
         onClick={(e: React.MouseEvent) => handleModalBGOnClick(e, bgRef)}
       >
         <motion.div
-          className="bg-background relative mx-auto h-full w-full max-w-3xl overflow-auto scroll-auto rounded-xl px-8 py-16"
+          className="modal bg-background relative mx-auto h-full w-full max-w-3xl overflow-auto scroll-auto rounded-xl px-8 py-16"
           initial={{ opacity: 0, y: "30%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.3 }}
