@@ -435,3 +435,56 @@ export const galleryContent: GalleryContentTypes[] = [
     },
   },
 ];
+
+export const skillsDev = [
+  {
+    title: "React",
+    description:
+      "재사용성을 고려한 컴포넌트를 만들고 조합하여 유지보수가 용이한 UI를 구현할 수 있습니다. 커스텀 hooks를 만들어 반복되는 로직을 재사용 할 수 있습니다.",
+  },
+  {
+    title: "JavaScript",
+    description:
+      "JavaScript의 자료형을 이해하고, 다양한 메서드를 이용하여 DOM을 조작하고 함수형 프로그래밍을 할 수 있습니다.",
+  },
+  {
+    title: "TypeScript",
+    description:
+      "TypeScript의 자료형을 이해하고, 상황에 맞는 타입 지정으로 예기치 않은 오류를 막을 수 있으며, 제네릭을 사용해 유연한 타입 지정을 할 수 있습니다.",
+  },
+  {
+    title: "Next.js",
+    description:
+      "SSR 방식을 이용해 빠른 랜더링을 할 수 있고, 동적 라우팅을 이용해 상황에 따른 url을 빌드할 수 있습니다.",
+  },
+  {
+    title: "Styled-Components",
+    description:
+      "Styled-Components의 문법을 이해하여 다양한 컴포넌트의 스타일링을 할 수 있고, 전역 스타일도 쉽게 적용할 수 있습니다.",
+  },
+  {
+    title: "TailwindCSS",
+    description:
+      "TailwindCSS의 문법을 이해하여 다양한 컴포넌트의 스타일링을 할 수 있고, 전역 스타일도 쉽게 적용할 수 있습니다.",
+  },
+  {
+    title: "Three.js",
+    description:
+      "camera, mesh, material, scene 등의 개념을 이해하고, React Three Fiber 라이브러리를 이용해 3D 오브젝트를 활용하여 충돌 감지 등의 간단한 상호 동작을 구현할 수 있습니다.",
+  },
+  {
+    title: "Recoil",
+    description:
+      "전역의 상태를 관리하면서 props drilling을 막고 이를 이용한 모달창 등을 만들 수 있습니다.",
+  },
+  {
+    title: "Firebase",
+    description:
+      "Firebase에 데이터를 저장하고 불러와 사용할 수 있으며, 이를 통한 회원 가입 기능을 구현할 수 있습니다.",
+  },
+  {
+    title: "Figma",
+    description:
+      "컴포넌트 기능을 이용하여 UX를 고려한 모바일 및 데스크탑의 UI를 작성할 수 있습니다.",
+  },
+] as const;

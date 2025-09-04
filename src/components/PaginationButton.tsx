@@ -1,14 +1,25 @@
+"use client";
+
+import { twMerge } from "tailwind-merge";
+
 interface PaginationButtonTypes
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   direction: 1 | -1;
 }
 
-function PaginationButton({ direction, onClick }: PaginationButtonTypes) {
+function PaginationButton({
+  direction,
+  onClick,
+  className,
+}: PaginationButtonTypes) {
   return (
     <>
       {direction === 1 ? (
         <button
-          className="z-11 hover:bg-foreground/70 bg-foreground/40 mr-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90"
+          className={twMerge(
+            "z-11 hover:bg-foreground/70 bg-foreground/40 mr-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90",
+            className
+          )}
           onClick={onClick}
         >
           <span className="a11y-hidden">다음</span>
@@ -16,7 +27,10 @@ function PaginationButton({ direction, onClick }: PaginationButtonTypes) {
         </button>
       ) : (
         <button
-          className="z-11 hover:bg-foreground/70 bg-foreground/40 ml-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90"
+          className={twMerge(
+            "z-11 hover:bg-foreground/70 bg-foreground/40 ml-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full shadow transition-all active:scale-90",
+            className
+          )}
           onClick={onClick}
         >
           <span className="a11y-hidden">이전</span>
