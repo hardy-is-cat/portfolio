@@ -28,7 +28,10 @@ function MainVisual() {
   const darkMode = useAtomValue(darkModeAtom);
 
   return (
-    <div className="relative mt-[100px] flex h-[calc(100vh-100px)] w-full items-center justify-start">
+    <div
+      id="main-visual"
+      className="relative mt-[100px] flex h-[calc(100vh-100px)] w-full items-center justify-start"
+    >
       <Particles />
       <motion.div
         initial={{ y: "100%", opacity: 0 }}
@@ -45,7 +48,7 @@ function MainVisual() {
             : "조정현입니다."}
         </p>
         <span className="text-headline5 font-normal">
-          최신 업데이트 날짜_25.08.26
+          최신 업데이트 날짜_25.09.05
         </span>
       </motion.div>
       <ScrollDownArrow />

@@ -14,7 +14,7 @@ function Introduce() {
   const darkMode = useAtomValue(darkModeAtom);
 
   return (
-    <section>
+    <section id="introduce">
       <SectionTitle>
         {darkMode === "dark"
           ? introContents.developer.headline

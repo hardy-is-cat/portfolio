@@ -9,7 +9,7 @@ import { galleryContent, projectContent } from "@/src/data";
 function Projects() {
   const darkMode = useAtomValue(darkModeAtom);
   return (
-    <section>
+    <section id="projects">
       <SectionTitle>{darkMode === "dark" ? "프로젝트" : "갤러리"}</SectionTitle>
       <div className="projects-list flex flex-wrap">
         {darkMode === "dark"

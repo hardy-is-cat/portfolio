@@ -3,7 +3,7 @@ import SkillCardList from "../SkillCardList";
 
 function Skills() {
   return (
-    <section>
+    <section id="skills">
       <SectionTitle>보유 기술</SectionTitle>
       <SkillCardList />
     </section>

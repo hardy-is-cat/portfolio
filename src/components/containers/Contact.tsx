@@ -68,7 +68,7 @@ function Contact() {
   };
 
   return (
-    <section className="m-auto w-full">
+    <section id="contact" className="m-auto w-full">
       <SectionTitle>연락처</SectionTitle>
       <div className="max-w-1/2 m-auto mb-10 text-center">
         <p className="mb-5 text-xl">
