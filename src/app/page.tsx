@@ -7,6 +7,7 @@ import Projects from "@/components/containers/Projects";
 import Skills from "@/components/containers/Skills";
 import { useAtomValue } from "jotai";
 import { darkModeAtom } from "../utils/atoms";
+import Contact from "@/components/containers/Contact";
 
 export default function Home() {
   const darkMode = useAtomValue(darkModeAtom);
@@ -17,13 +18,7 @@ export default function Home() {
       <Introduce />
       <Projects />
       {darkMode === "dark" && <Skills />}
-      <div className="h-screen" />
-      <div className="h-screen" />
-      <div className="h-screen" />
-      <div className="h-screen" />
-      {/* Skills */}
-      {/* Projects */}
-      {/* Contact */}
+      <Contact />
       {/* Footer */}
     </>
   );
