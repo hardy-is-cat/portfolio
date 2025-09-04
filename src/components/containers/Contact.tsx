@@ -40,7 +40,7 @@ function Contact() {
     try {
       await emailjs.send(
         EMAILJS_SERVICE_KEY,
-        "templaacxvz",
+        "template_33acxvz",
         {
           from_name: formData.get("name"),
           to_name: "정현",
