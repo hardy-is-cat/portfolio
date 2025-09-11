@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 import SectionTitle from "../SectionTitle";
 import Button from "../Button";
@@ -43,9 +43,7 @@ function Contact() {
         "template_33acxvz",
         {
           from_name: formData.get("name"),
-          to_name: "정현",
-          from_email: formData.get("email"),
-          to_email: formData.get("email"),
+          reply_to: formData.get("email"),
           message: formData.get("message"),
         },
         EMAILJS_PUBLIC_KEY
@@ -70,7 +68,13 @@ function Contact() {
   return (
     <section id="contact" className="m-auto w-full">
       <SectionTitle>연락처</SectionTitle>
-      <div className="max-w-1/2 m-auto mb-10 text-center">
+      <motion.div
+        className="max-w-1/2 m-auto mb-10 text-center"
+        initial={{ y: "50%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0, once: true }}
+      >
         <p className="mb-5 text-xl">
           <IconContext.Provider
             value={{
@@ -117,8 +121,15 @@ function Contact() {
             </IconContext.Provider>
           </a>
         </div>
-      </div>
-      <form onSubmit={handleSubmit} className="m-auto max-w-sm text-center">
+      </motion.div>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="m-auto max-w-sm text-center"
+        initial={{ y: "50%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0, once: true }}
+      >
         <div className="mb-2 flex flex-col gap-2">
           <label htmlFor="name">성함</label>
           <Input
@@ -150,7 +161,7 @@ function Contact() {
           />
         </div>
         <Button type="submit">{submitText}</Button>
-      </form>
+      </motion.form>
       <AnimatePresence>
         {toastText === "success" && (
           <Toast message="전송 성공!" state="success" />

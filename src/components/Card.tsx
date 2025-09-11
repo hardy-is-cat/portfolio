@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { AnimatePresence } from "motion/react";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { useAtomValue } from "jotai";
 import { darkModeAtom } from "../utils/atoms";
 import {
@@ -27,7 +27,7 @@ function Card({ card, modal }: CardTypes) {
 
   return (
     <>
-      <div
+      <motion.li
         className="sm:min-w-1/2 lg:min-w-1/3 before:bg-1 relative aspect-square min-w-full cursor-pointer p-5"
         style={{
           backgroundColor: bgColor,
@@ -35,6 +35,8 @@ function Card({ card, modal }: CardTypes) {
           backgroundSize: darkMode === "dark" ? 250 : 150,
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
+          opacity: 0,
+          y: 100,
         }}
         onClick={handleModal}
       >
@@ -64,7 +66,7 @@ function Card({ card, modal }: CardTypes) {
             />
           </button>
         </div>
-      </div>
+      </motion.li>
       <AnimatePresence>
         {isModalShowing && <Modal content={modal} handleModal={handleModal} />}
       </AnimatePresence>

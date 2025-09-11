@@ -1,12 +1,12 @@
 "use client";
 
-import { useAtomValue } from "jotai";
-import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { useAtomValue } from "jotai";
 import { darkModeAtom } from "../utils/atoms";
 
 function GNB({ isScroll }: { isScroll: boolean }) {
-  const [isOpened, setIsOpend] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
   const darkMode = useAtomValue(darkModeAtom);
 
   return (
@@ -15,7 +15,7 @@ function GNB({ isScroll }: { isScroll: boolean }) {
         type="button"
         className={`${isScroll ? "size-11 px-2.5" : "size-12 px-3"} border-foreground transition-custom fixed z-50 flex cursor-pointer flex-col items-start justify-center gap-2 rounded-sm border`}
         aria-label="메뉴 열기"
-        onClick={() => setIsOpend(!isOpened)}
+        onClick={() => setIsOpened(!isOpened)}
       >
         <span
           className={`block ${
@@ -36,13 +36,13 @@ function GNB({ isScroll }: { isScroll: boolean }) {
       <AnimatePresence>
         {isOpened && (
           <motion.nav
-            className="z-49 fixed right-0 top-0 flex size-full items-center justify-end bg-black/40"
+            className="z-49 fixed right-0 top-0 flex size-full justify-end bg-black/40 lg:items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.ul
-              className="bg-gnb-background lg:w-sm size-full px-16 py-24 text-center text-2xl font-light lg:text-left"
+              className="bg-gnb-background sm:w-sm fixed top-0 z-50 w-full px-16 py-24 text-center text-2xl font-light sm:h-full sm:text-left lg:right-0"
               initial={{ x: 200, opacity: 0.5 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 200, opacity: 0.5 }}
@@ -65,7 +65,7 @@ function GNB({ isScroll }: { isScroll: boolean }) {
                   <a href="#skills">보유 기술</a>
                 </li>
               )}
-              <li className="mb-8">
+              <li>
                 <a href="#contact">연락처</a>
               </li>
             </motion.ul>

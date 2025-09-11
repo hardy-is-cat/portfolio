@@ -25,7 +25,7 @@ function Introduce() {
         initial={{ y: "50%", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ amount: 0.2, once: true }}
+        viewport={{ amount: 0, once: true }}
       >
         <div className="text-center">
           <div className="relative mb-5 h-[300px] w-[300px] overflow-hidden rounded-full">

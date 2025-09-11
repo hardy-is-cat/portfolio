@@ -60,9 +60,10 @@ function SkillCardItem({ index, title, description }: SkillCardItemTypes) {
       <motion.li
         className="bg-gnb-background hover:bg-primary/30 flex w-full cursor-pointer items-center gap-3 px-5 py-4 text-center transition-colors md:aspect-square md:flex-col md:justify-center"
         layoutId={`card-container-${title}-${index}`}
-        onClick={() => setActive(!active)}
-        whileHover={{ y: -10 }}
+        onClick={() => setActive(true)}
+        whileHover={{ scale: 1.05 }}
         animate={{ borderRadius: "10px" }}
+        style={{ y: 50, opacity: 0 }}
       >
         <motion.div
           layoutId={`card-image-${title}-${index}`}
@@ -86,7 +87,6 @@ function SkillCardItem({ index, title, description }: SkillCardItemTypes) {
           className="z-51 bg-gnb-background fixed inset-0 m-auto flex aspect-square max-w-[400px] flex-col items-center justify-center gap-5 p-4 text-center"
           layoutId={`card-container-${title}-${index}`}
           layout
-          onClick={() => setActive(!active)}
           animate={{ borderRadius: "20px" }}
         >
           <motion.div
@@ -114,7 +114,7 @@ function SkillCardItem({ index, title, description }: SkillCardItemTypes) {
           >
             {description}
           </motion.p>
-          <Button>닫기</Button>
+          <Button onClick={() => setActive(!active)}>닫기</Button>
         </motion.div>
       )}
     </>

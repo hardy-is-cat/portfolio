@@ -418,7 +418,7 @@ export const galleryContent: GalleryContentTypes[] = [
   {
     id: 1,
     card: {
-      title: "HARDY",
+      title: "ZUAL",
       thumb: "/images/icon-woman.svg",
       bgColor: "#aa40d4",
     },
